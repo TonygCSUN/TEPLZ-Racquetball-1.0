@@ -69,7 +69,7 @@ class QuickPlayTableViewController: UITableViewController {
         cell.imageView?.image = UIImage(named: newSection.sectionImage)
         
         
-        // test
+        // test 2
 
         return cell
     }
