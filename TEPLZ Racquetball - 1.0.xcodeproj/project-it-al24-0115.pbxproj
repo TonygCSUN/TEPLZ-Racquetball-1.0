@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F91DD7331AB62C0F0098CB96 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91DD7321AB62C0F0098CB96 /* AudioToolbox.framework */; };
+		F91DD7351AB642D20098CB96 /* LeaderBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DD7341AB642D20098CB96 /* LeaderBoardViewController.swift */; };
+		F91DD7371AB662980098CB96 /* EnterMatchStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DD7361AB662980098CB96 /* EnterMatchStatsViewController.swift */; };
+		F91DD7691AB76BFE0098CB96 /* EnterMatchStatsViewControllerOGnotes in Resources */ = {isa = PBXBuildFile; fileRef = F91DD7681AB76BFE0098CB96 /* EnterMatchStatsViewControllerOGnotes */; };
+		F91DD76D1AB7E64B0098CB96 /* MyStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DD76C1AB7E64B0098CB96 /* MyStatsViewController.swift */; };
+		F92DB2501AA04BCB009A1C41 /* AdvancedLessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DB24F1AA04BCB009A1C41 /* AdvancedLessonsViewController.swift */; };
+		F92DB2561AA0606E009A1C41 /* BasicShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DB2551AA0606E009A1C41 /* BasicShot.swift */; };
+		F98319641AA3EE3C00DF59C7 /* BasicShotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98319631AA3EE3C00DF59C7 /* BasicShotsViewController.swift */; };
+		F98319661AA4005C00DF59C7 /* BasicShotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98319651AA4005C00DF59C7 /* BasicShotDetailViewController.swift */; };
+		F98319681AA4389B00DF59C7 /* TASSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98319671AA4389B00DF59C7 /* TASSViewController.swift */; };
+		F9B20B4F1A9E3BC6002D99F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B20B4E1A9E3BC6002D99F4 /* AppDelegate.swift */; };
+		F9B20B541A9E3BC6002D99F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9B20B521A9E3BC6002D99F4 /* Main.storyboard */; };
+		F9B20B561A9E3BC6002D99F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9B20B551A9E3BC6002D99F4 /* Images.xcassets */; };
+		F9B20B591A9E3BC6002D99F4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9B20B571A9E3BC6002D99F4 /* LaunchScreen.xib */; };
+		F9B20B651A9E3BC6002D99F4 /* TEPLZ_Racquetball___1_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B20B641A9E3BC6002D99F4 /* TEPLZ_Racquetball___1_0Tests.swift */; };
+		F9B20B6F1A9E4795002D99F4 /* QuickPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B20B6E1A9E4795002D99F4 /* QuickPlay.swift */; };
+		F9B20B711A9E48B7002D99F4 /* QuickPlayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B20B701A9E48B7002D99F4 /* QuickPlayTableViewController.swift */; };
+		F9B20B731A9E4904002D99F4 /* QuickPlayDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B20B721A9E4904002D99F4 /* QuickPlayDetailsViewController.swift */; };
+		F9B20B751A9E4940002D99F4 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B20B741A9E4940002D99F4 /* VideoViewController.swift */; };
+		F9E4008E1AB622F700B9C9BA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E4008D1AB622F700B9C9BA /* SignUpViewController.swift */; };
+		F9E400921AB6248900B9C9BA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E4008F1AB6248900B9C9BA /* Bolts.framework */; };
+		F9E400931AB6248900B9C9BA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E400901AB6248900B9C9BA /* Parse.framework */; };
+		F9E400941AB6248900B9C9BA /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E400911AB6248900B9C9BA /* ParseUI.framework */; };
+		F9E400961AB6253100B9C9BA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E400951AB6253100B9C9BA /* Accounts.framework */; };
+		F9E400A11AB625AB00B9C9BA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E400971AB625AB00B9C9BA /* CFNetwork.framework */; };
+		F9E400A21AB625AB00B9C9BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E400981AB625AB00B9C9BA /* CoreData.framework */; };
+		F9E400A31AB625AB00B9C9BA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E400991AB625AB00B9C9BA /* CoreFoundation.framework */; };
+		F9E400A41AB625AB00B9C9BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E4009A1AB625AB00B9C9BA /* CoreGraphics.framework */; };
+		F9E400A51AB625AB00B9C9BA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E4009B1AB625AB00B9C9BA /* CoreLocation.framework */; };
+		F9E400A61AB625AB00B9C9BA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E4009C1AB625AB00B9C9BA /* MobileCoreServices.framework */; };
+		F9E400A71AB625AB00B9C9BA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E4009D1AB625AB00B9C9BA /* QuartzCore.framework */; };
+		F9E400A81AB625AB00B9C9BA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E4009E1AB625AB00B9C9BA /* Social.framework */; };
+		F9E400A91AB625AB00B9C9BA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E4009F1AB625AB00B9C9BA /* SystemConfiguration.framework */; };
+		F9E400AA1AB625AB00B9C9BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E400A01AB625AB00B9C9BA /* UIKit.framework */; };
+		F9E400AC1AB625C800B9C9BA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E400AB1AB625C800B9C9BA /* libsqlite3.dylib */; };
+		F9E400AE1AB625DE00B9C9BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E400AD1AB625DE00B9C9BA /* Foundation.framework */; };
+		F9E400B01AB625FF00B9C9BA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E400AF1AB625FF00B9C9BA /* Security.framework */; };
+		F9E400B21AB6261000B9C9BA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E400B11AB6261000B9C9BA /* libz.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9B20B5F1A9E3BC6002D99F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9B20B411A9E3BC6002D99F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9B20B481A9E3BC6002D99F4;
+			remoteInfo = "TEPLZ Racquetball - 1.0";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F91DD7321AB62C0F0098CB96 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F91DD7341AB642D20098CB96 /* LeaderBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoardViewController.swift; sourceTree = "<group>"; };
+		F91DD7361AB662980098CB96 /* EnterMatchStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterMatchStatsViewController.swift; sourceTree = "<group>"; };
+		F91DD7681AB76BFE0098CB96 /* EnterMatchStatsViewControllerOGnotes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EnterMatchStatsViewControllerOGnotes; sourceTree = "<group>"; };
+		F91DD76C1AB7E64B0098CB96 /* MyStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStatsViewController.swift; sourceTree = "<group>"; };
+		F92DB24F1AA04BCB009A1C41 /* AdvancedLessonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdvancedLessonsViewController.swift; path = ../AdvancedLessonsViewController.swift; sourceTree = "<group>"; };
+		F92DB2551AA0606E009A1C41 /* BasicShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicShot.swift; path = ../BasicShot.swift; sourceTree = "<group>"; };
+		F98319631AA3EE3C00DF59C7 /* BasicShotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicShotsViewController.swift; sourceTree = "<group>"; };
+		F98319651AA4005C00DF59C7 /* BasicShotDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicShotDetailViewController.swift; path = ../BasicShotDetailViewController.swift; sourceTree = "<group>"; };
+		F98319671AA4389B00DF59C7 /* TASSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TASSViewController.swift; sourceTree = "<group>"; };
+		F9B20B491A9E3BC6002D99F4 /* TEPLZ Racquetball - 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TEPLZ Racquetball - 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9B20B4D1A9E3BC6002D99F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9B20B4E1A9E3BC6002D99F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9B20B531A9E3BC6002D99F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9B20B551A9E3BC6002D99F4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F9B20B581A9E3BC6002D99F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F9B20B5E1A9E3BC6002D99F4 /* TEPLZ Racquetball - 1.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TEPLZ Racquetball - 1.0Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9B20B631A9E3BC6002D99F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9B20B641A9E3BC6002D99F4 /* TEPLZ_Racquetball___1_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TEPLZ_Racquetball___1_0Tests.swift"; sourceTree = "<group>"; };
+		F9B20B6E1A9E4795002D99F4 /* QuickPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickPlay.swift; sourceTree = "<group>"; };
+		F9B20B701A9E48B7002D99F4 /* QuickPlayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickPlayTableViewController.swift; sourceTree = "<group>"; };
+		F9B20B721A9E4904002D99F4 /* QuickPlayDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickPlayDetailsViewController.swift; sourceTree = "<group>"; };
+		F9B20B741A9E4940002D99F4 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		F9E4008D1AB622F700B9C9BA /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F9E4008F1AB6248900B9C9BA /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Bolts.framework; sourceTree = "<group>"; };
+		F9E400901AB6248900B9C9BA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Parse.framework; sourceTree = "<group>"; };
+		F9E400911AB6248900B9C9BA /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = ../ParseUI.framework; sourceTree = "<group>"; };
+		F9E400951AB6253100B9C9BA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		F9E400971AB625AB00B9C9BA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F9E400981AB625AB00B9C9BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F9E400991AB625AB00B9C9BA /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		F9E4009A1AB625AB00B9C9BA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F9E4009B1AB625AB00B9C9BA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F9E4009C1AB625AB00B9C9BA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F9E4009D1AB625AB00B9C9BA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F9E4009E1AB625AB00B9C9BA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		F9E4009F1AB625AB00B9C9BA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F9E400A01AB625AB00B9C9BA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F9E400AB1AB625C800B9C9BA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F9E400AD1AB625DE00B9C9BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F9E400AF1AB625FF00B9C9BA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F9E400B11AB6261000B9C9BA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F9E400B41AB628E000B9C9BA /* TEPLZRacquetball-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TEPLZRacquetball-Bridge-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9B20B461A9E3BC6002D99F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F91DD7331AB62C0F0098CB96 /* AudioToolbox.framework in Frameworks */,
+				F9E400B21AB6261000B9C9BA /* libz.dylib in Frameworks */,
+				F9E400B01AB625FF00B9C9BA /* Security.framework in Frameworks */,
+				F9E400AE1AB625DE00B9C9BA /* Foundation.framework in Frameworks */,
+				F9E400AC1AB625C800B9C9BA /* libsqlite3.dylib in Frameworks */,
+				F9E400A11AB625AB00B9C9BA /* CFNetwork.framework in Frameworks */,
+				F9E400A21AB625AB00B9C9BA /* CoreData.framework in Frameworks */,
+				F9E400A31AB625AB00B9C9BA /* CoreFoundation.framework in Frameworks */,
+				F9E400A41AB625AB00B9C9BA /* CoreGraphics.framework in Frameworks */,
+				F9E400A51AB625AB00B9C9BA /* CoreLocation.framework in Frameworks */,
+				F9E400A61AB625AB00B9C9BA /* MobileCoreServices.framework in Frameworks */,
+				F9E400A71AB625AB00B9C9BA /* QuartzCore.framework in Frameworks */,
+				F9E400A81AB625AB00B9C9BA /* Social.framework in Frameworks */,
+				F9E400A91AB625AB00B9C9BA /* SystemConfiguration.framework in Frameworks */,
+				F9E400AA1AB625AB00B9C9BA /* UIKit.framework in Frameworks */,
+				F9E400961AB6253100B9C9BA /* Accounts.framework in Frameworks */,
+				F9E400941AB6248900B9C9BA /* ParseUI.framework in Frameworks */,
+				F9E400931AB6248900B9C9BA /* Parse.framework in Frameworks */,
+				F9E400921AB6248900B9C9BA /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9B20B5B1A9E3BC6002D99F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9B20B401A9E3BC6002D99F4 = {
+			isa = PBXGroup;
+			children = (
+				F91DD76C1AB7E64B0098CB96 /* MyStatsViewController.swift */,
+				F91DD7321AB62C0F0098CB96 /* AudioToolbox.framework */,
+				F9E400B41AB628E000B9C9BA /* TEPLZRacquetball-Bridge-Header.h */,
+				F9E400B11AB6261000B9C9BA /* libz.dylib */,
+				F9E400AF1AB625FF00B9C9BA /* Security.framework */,
+				F9E400AD1AB625DE00B9C9BA /* Foundation.framework */,
+				F9E400AB1AB625C800B9C9BA /* libsqlite3.dylib */,
+				F9E400971AB625AB00B9C9BA /* CFNetwork.framework */,
+				F9E400981AB625AB00B9C9BA /* CoreData.framework */,
+				F9E400991AB625AB00B9C9BA /* CoreFoundation.framework */,
+				F9E4009A1AB625AB00B9C9BA /* CoreGraphics.framework */,
+				F9E4009B1AB625AB00B9C9BA /* CoreLocation.framework */,
+				F9E4009C1AB625AB00B9C9BA /* MobileCoreServices.framework */,
+				F9E4009D1AB625AB00B9C9BA /* QuartzCore.framework */,
+				F9E4009E1AB625AB00B9C9BA /* Social.framework */,
+				F9E4009F1AB625AB00B9C9BA /* SystemConfiguration.framework */,
+				F9E400A01AB625AB00B9C9BA /* UIKit.framework */,
+				F9E400951AB6253100B9C9BA /* Accounts.framework */,
+				F98319671AA4389B00DF59C7 /* TASSViewController.swift */,
+				F9B20B4B1A9E3BC6002D99F4 /* TEPLZ Racquetball - 1.0 */,
+				F9B20B611A9E3BC6002D99F4 /* TEPLZ Racquetball - 1.0Tests */,
+				F9B20B4A1A9E3BC6002D99F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9B20B4A1A9E3BC6002D99F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9B20B491A9E3BC6002D99F4 /* TEPLZ Racquetball - 1.0.app */,
+				F9B20B5E1A9E3BC6002D99F4 /* TEPLZ Racquetball - 1.0Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9B20B4B1A9E3BC6002D99F4 /* TEPLZ Racquetball - 1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				F9E4008F1AB6248900B9C9BA /* Bolts.framework */,
+				F9E400901AB6248900B9C9BA /* Parse.framework */,
+				F9E400911AB6248900B9C9BA /* ParseUI.framework */,
+				F9B20B521A9E3BC6002D99F4 /* Main.storyboard */,
+				F91DD7361AB662980098CB96 /* EnterMatchStatsViewController.swift */,
+				F91DD7681AB76BFE0098CB96 /* EnterMatchStatsViewControllerOGnotes */,
+				F91DD7341AB642D20098CB96 /* LeaderBoardViewController.swift */,
+				F9E4008D1AB622F700B9C9BA /* SignUpViewController.swift */,
+				F9B20B4E1A9E3BC6002D99F4 /* AppDelegate.swift */,
+				F9B20B721A9E4904002D99F4 /* QuickPlayDetailsViewController.swift */,
+				F9B20B701A9E48B7002D99F4 /* QuickPlayTableViewController.swift */,
+				F9B20B6E1A9E4795002D99F4 /* QuickPlay.swift */,
+				F9B20B741A9E4940002D99F4 /* VideoViewController.swift */,
+				F92DB24F1AA04BCB009A1C41 /* AdvancedLessonsViewController.swift */,
+				F98319631AA3EE3C00DF59C7 /* BasicShotsViewController.swift */,
+				F98319651AA4005C00DF59C7 /* BasicShotDetailViewController.swift */,
+				F92DB2551AA0606E009A1C41 /* BasicShot.swift */,
+				F9B20B551A9E3BC6002D99F4 /* Images.xcassets */,
+				F9B20B571A9E3BC6002D99F4 /* LaunchScreen.xib */,
+				F9B20B4C1A9E3BC6002D99F4 /* Supporting Files */,
+			);
+			path = "TEPLZ Racquetball - 1.0";
+			sourceTree = "<group>";
+		};
+		F9B20B4C1A9E3BC6002D99F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9B20B4D1A9E3BC6002D99F4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9B20B611A9E3BC6002D99F4 /* TEPLZ Racquetball - 1.0Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F9B20B641A9E3BC6002D99F4 /* TEPLZ_Racquetball___1_0Tests.swift */,
+				F9B20B621A9E3BC6002D99F4 /* Supporting Files */,
+			);
+			path = "TEPLZ Racquetball - 1.0Tests";
+			sourceTree = "<group>";
+		};
+		F9B20B621A9E3BC6002D99F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9B20B631A9E3BC6002D99F4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9B20B481A9E3BC6002D99F4 /* TEPLZ Racquetball - 1.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9B20B681A9E3BC6002D99F4 /* Build configuration list for PBXNativeTarget "TEPLZ Racquetball - 1.0" */;
+			buildPhases = (
+				F9B20B451A9E3BC6002D99F4 /* Sources */,
+				F9B20B461A9E3BC6002D99F4 /* Frameworks */,
+				F9B20B471A9E3BC6002D99F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TEPLZ Racquetball - 1.0";
+			productName = "TEPLZ Racquetball - 1.0";
+			productReference = F9B20B491A9E3BC6002D99F4 /* TEPLZ Racquetball - 1.0.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9B20B5D1A9E3BC6002D99F4 /* TEPLZ Racquetball - 1.0Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9B20B6B1A9E3BC6002D99F4 /* Build configuration list for PBXNativeTarget "TEPLZ Racquetball - 1.0Tests" */;
+			buildPhases = (
+				F9B20B5A1A9E3BC6002D99F4 /* Sources */,
+				F9B20B5B1A9E3BC6002D99F4 /* Frameworks */,
+				F9B20B5C1A9E3BC6002D99F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9B20B601A9E3BC6002D99F4 /* PBXTargetDependency */,
+			);
+			name = "TEPLZ Racquetball - 1.0Tests";
+			productName = "TEPLZ Racquetball - 1.0Tests";
+			productReference = F9B20B5E1A9E3BC6002D99F4 /* TEPLZ Racquetball - 1.0Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9B20B411A9E3BC6002D99F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Apps for TEPLZ";
+				TargetAttributes = {
+					F9B20B481A9E3BC6002D99F4 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 3G2T5JZW4L;
+					};
+					F9B20B5D1A9E3BC6002D99F4 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = F9B20B481A9E3BC6002D99F4;
+					};
+				};
+			};
+			buildConfigurationList = F9B20B441A9E3BC6002D99F4 /* Build configuration list for PBXProject "TEPLZ Racquetball - 1.0" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9B20B401A9E3BC6002D99F4;
+			productRefGroup = F9B20B4A1A9E3BC6002D99F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9B20B481A9E3BC6002D99F4 /* TEPLZ Racquetball - 1.0 */,
+				F9B20B5D1A9E3BC6002D99F4 /* TEPLZ Racquetball - 1.0Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9B20B471A9E3BC6002D99F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F91DD7691AB76BFE0098CB96 /* EnterMatchStatsViewControllerOGnotes in Resources */,
+				F9B20B541A9E3BC6002D99F4 /* Main.storyboard in Resources */,
+				F9B20B591A9E3BC6002D99F4 /* LaunchScreen.xib in Resources */,
+				F9B20B561A9E3BC6002D99F4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9B20B5C1A9E3BC6002D99F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9B20B451A9E3BC6002D99F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F98319661AA4005C00DF59C7 /* BasicShotDetailViewController.swift in Sources */,
+				F92DB2501AA04BCB009A1C41 /* AdvancedLessonsViewController.swift in Sources */,
+				F91DD76D1AB7E64B0098CB96 /* MyStatsViewController.swift in Sources */,
+				F98319641AA3EE3C00DF59C7 /* BasicShotsViewController.swift in Sources */,
+				F98319681AA4389B00DF59C7 /* TASSViewController.swift in Sources */,
+				F9B20B4F1A9E3BC6002D99F4 /* AppDelegate.swift in Sources */,
+				F91DD7371AB662980098CB96 /* EnterMatchStatsViewController.swift in Sources */,
+				F92DB2561AA0606E009A1C41 /* BasicShot.swift in Sources */,
+				F9B20B6F1A9E4795002D99F4 /* QuickPlay.swift in Sources */,
+				F9B20B711A9E48B7002D99F4 /* QuickPlayTableViewController.swift in Sources */,
+				F9E4008E1AB622F700B9C9BA /* SignUpViewController.swift in Sources */,
+				F9B20B751A9E4940002D99F4 /* VideoViewController.swift in Sources */,
+				F91DD7351AB642D20098CB96 /* LeaderBoardViewController.swift in Sources */,
+				F9B20B731A9E4904002D99F4 /* QuickPlayDetailsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9B20B5A1A9E3BC6002D99F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9B20B651A9E3BC6002D99F4 /* TEPLZ_Racquetball___1_0Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9B20B601A9E3BC6002D99F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9B20B481A9E3BC6002D99F4 /* TEPLZ Racquetball - 1.0 */;
+			targetProxy = F9B20B5F1A9E3BC6002D99F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9B20B521A9E3BC6002D99F4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9B20B531A9E3BC6002D99F4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9B20B571A9E3BC6002D99F4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9B20B581A9E3BC6002D99F4 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9B20B661A9E3BC6002D99F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9B20B671A9E3BC6002D99F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9B20B691A9E3BC6002D99F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "TEPLZ Racquetball - 1.0/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TEPLZRacquetball-Bridge-Header.h";
+			};
+			name = Debug;
+		};
+		F9B20B6A1A9E3BC6002D99F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "TEPLZ Racquetball - 1.0/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TEPLZRacquetball-Bridge-Header.h";
+			};
+			name = Release;
+		};
+		F9B20B6C1A9E3BC6002D99F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TEPLZ Racquetball - 1.0Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TEPLZ Racquetball - 1.0.app/TEPLZ Racquetball - 1.0";
+			};
+			name = Debug;
+		};
+		F9B20B6D1A9E3BC6002D99F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TEPLZ Racquetball - 1.0Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TEPLZ Racquetball - 1.0.app/TEPLZ Racquetball - 1.0";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9B20B441A9E3BC6002D99F4 /* Build configuration list for PBXProject "TEPLZ Racquetball - 1.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9B20B661A9E3BC6002D99F4 /* Debug */,
+				F9B20B671A9E3BC6002D99F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9B20B681A9E3BC6002D99F4 /* Build configuration list for PBXNativeTarget "TEPLZ Racquetball - 1.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9B20B691A9E3BC6002D99F4 /* Debug */,
+				F9B20B6A1A9E3BC6002D99F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9B20B6B1A9E3BC6002D99F4 /* Build configuration list for PBXNativeTarget "TEPLZ Racquetball - 1.0Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9B20B6C1A9E3BC6002D99F4 /* Debug */,
+				F9B20B6D1A9E3BC6002D99F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9B20B411A9E3BC6002D99F4 /* Project object */;
+}

@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Gob-9Z-Fe2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Quick Play-->
+        <scene sceneID="rg6-AZ-t9b">
+            <objects>
+                <tableViewController storyboardIdentifier="QuickPlay" title="Quick Play" id="0dh-dB-r1Q" customClass="QuickPlayTableViewController" customModule="TEPLZ_Racquetball___1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" id="cMK-oA-5ZY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="quickPlayCell" rowHeight="120" id="SDh-x8-mwU">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SDh-x8-mwU" id="ZU9-QM-BJL">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FXj-ID-ggu">
+                                            <rect key="frame" x="260" y="8" width="80" height="81"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="81" id="CR3-MP-LzT"/>
+                                                <constraint firstAttribute="width" constant="80" id="L9f-aG-VYM"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsT-Be-9Bu">
+                                            <rect key="frame" x="231" y="84" width="139" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="accessoryView" destination="VsT-Be-9Bu" id="vNB-Hh-Ssf"/>
+                                    <segue destination="GgT-Di-hkK" kind="show" id="YNu-7o-tfa"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0dh-dB-r1Q" id="qik-75-bLw"/>
+                            <outlet property="delegate" destination="0dh-dB-r1Q" id="tKZ-yB-d0m"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Quick Play" id="x76-Ki-SSD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p7u-JO-MXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="308"/>
+        </scene>
+        <!--Quick Play Details-->
+        <scene sceneID="KLh-Sm-R4I">
+            <objects>
+                <viewController storyboardIdentifier="QuickPlayDetails" title="Quick Play Details" id="GgT-Di-hkK" customClass="QuickPlayDetailsViewController" customModule="TEPLZ_Racquetball___1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fgN-Rg-7cB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Taf-IP-1db"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sCR-OH-9Dl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iG0-PJ-0vK">
+                                <rect key="frame" x="0.0" y="86" width="600" height="307"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ntj-Rq-Mcg">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Video" id="tbE-yu-N8i">
+                                        <connections>
+                                            <segue destination="RSA-zS-hTw" kind="show" id="TQ1-R1-hd1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAa-ww-lRA">
+                                <rect key="frame" x="16" y="411" width="568" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentImage" destination="iG0-PJ-0vK" id="l8G-0l-0BU"/>
+                        <outlet property="currentText" destination="tAa-ww-lRA" id="xUO-Uw-6uV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C6c-c4-Jbj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1680" y="308"/>
+        </scene>
+        <!--video-->
+        <scene sceneID="oyM-To-bq3">
+            <objects>
+                <viewController storyboardIdentifier="video" title="video" id="RSA-zS-hTw" customClass="VideoViewController" customModule="TEPLZ_Racquetball___1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Tn-zk-X3f"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Oe-ZU-yio"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AVd-dF-Aiy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbF-2E-3Uc">
+                                <rect key="frame" x="50" y="537" width="30" height="30"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fcj-Qp-W25">
+                                <rect key="frame" x="50" y="359" width="422" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailText" destination="Fcj-Qp-W25" id="314-dx-lf7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Fz-am-OsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2428" y="308"/>
+        </scene>
+        <!--SignUp-->
+        <scene sceneID="ODG-iy-Bzs">
+            <objects>
+                <viewController storyboardIdentifier="signup" id="iD1-Wy-svO" customClass="SignUpViewController" customModule="TEPLZ_Racquetball___1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q62-mM-4A0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xwa-oP-8bs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eG8-pP-VUj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to T.E.P.L.Z. for Racquetball!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ac-BY-vl3">
+                                <rect key="frame" x="16" y="61" width="568" height="74"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use the form below to sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ech-3h-nGV">
+                                <rect key="frame" x="16" y="117" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="testparse1" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iba-9W-WOE">
+                                <rect key="frame" x="193" y="232" width="214" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="pass1" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZx-BI-DZe">
+                                <rect key="frame" x="193" y="292" width="214" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already registered?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvF-7u-BmJ">
+                                <rect key="frame" x="226" y="456" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntz-gi-VqY">
+                                <rect key="frame" x="249" y="377" width="102" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUp:" destination="iD1-Wy-svO" eventType="touchUpInside" id="lsk-5I-wsJ"/>
+                                    <segue destination="8vk-EG-o3l" kind="show" identifier="jumpToLeaderboard" id="XtE-or-Bj0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMT-sT-NSR">
+                                <rect key="frame" x="268" y="475" width="65" height="30"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleSignUp:" destination="iD1-Wy-svO" eventType="touchUpInside" id="mzG-VC-xHs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="SignUp" image="first" id="gmN-30-HBT"/>
+                    <connections>
+                        <outlet property="alreadyRegistered" destination="lvF-7u-BmJ" id="vHF-H4-sxO"/>
+                        <outlet property="password" destination="OZx-BI-DZe" id="rW5-eH-eTR"/>
+                        <outlet property="signUpButton" destination="Ntz-gi-VqY" id="chL-P1-frb"/>
+                        <outlet property="signUpLabel" destination="ech-3h-nGV" id="9go-DI-dZJ"/>
+                        <outlet property="signUpToggleButton" destination="sMT-sT-NSR" id="O9I-BS-dZu"/>
+                        <outlet property="username" destination="iba-9W-WOE" id="BUI-TR-xTM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLd-Vz-wYu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2498" y="1203"/>
+        </scene>
+        <!--LeaderBoard-->
+        <scene sceneID="Nkq-GH-twL">
+            <objects>
+                <viewController storyboardIdentifier="Leaderboard" title="LeaderBoard" id="Tqu-3I-QHF" customClass="LeaderBoardViewController" customModule="TEPLZ_Racquetball___1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ld4-U4-O7Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="55I-QH-9lV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gfE-K5-sd0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnk-Pp-Qeb">
+                                <rect key="frame" x="221" y="105" width="158" height="30"/>
+                                <state key="normal" title="LeaderBoard Top Stats">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzQ-0K-V56">
+                                <rect key="frame" x="277" y="294" width="61" height="30"/>
+                                <state key="normal" title="My Stats">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gez-Ii-1sJ" kind="show" id="D8A-YE-OAF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSN-Kx-y9Q">
+                                <rect key="frame" x="283" y="478" width="49" height="30"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout:" destination="Tqu-3I-QHF" eventType="touchUpInside" id="JuI-h9-tCd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzM-eY-kOt">
+                                <rect key="frame" x="245" y="198" width="124" height="30"/>
+                                <state key="normal" title="Enter Match Stats">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wgl-W4-J17" kind="show" id="2ke-P2-kf6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="LeaderBoard" id="HhY-YV-owU"/>
+                    <connections>
+                        <outlet property="enterMatchStats" destination="BzM-eY-kOt" id="s54-IV-MBD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ll-kF-rQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1108" y="1203"/>
+        </scene>
+        <!--My Stats-->
+        <scene sceneID="088-cK-g6m">
+            <objects>
+                <viewController storyboardIdentifier="MyStats" title="My Stats" id="gez-Ii-1sJ" customClass="MyStatsViewController" customModule="TEPLZ_Racquetball___1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wvo-rp-Fut"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rjk-Im-aSE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IH2-Cq-Ps7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Stats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujC-AK-dtP">
+                                <rect key="frame" x="220" y="135" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5F-1h-IgD">
+                                <rect key="frame" x="232" y="515" width="136" height="30"/>
+                                <state key="normal" title="Retrieve latest stats">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="retrieveStats:" destination="gez-Ii-1sJ" eventType="touchUpInside" id="ccE-SG-Lbh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winning percentage of your games" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcx-ku-3sw">
+                                <rect key="frame" x="172" y="207" width="268" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total points scored" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bm6-Xm-PaI">
+                                <rect key="frame" x="227" y="289" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total games played" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozD-ZE-6U3">
+                                <rect key="frame" x="232" y="384" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WP000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gU-92-qi4">
+                                <rect key="frame" x="262" y="236" width="88" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TP000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rx-PJ-qtw">
+                                <rect key="frame" x="265" y="318" width="83" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TG000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djw-QW-ZEg">
+                                <rect key="frame" x="271" y="413" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="latestStats" destination="x5F-1h-IgD" id="7bo-kv-fJb"/>
+                        <outlet property="totalGames" destination="djw-QW-ZEg" id="Jx6-ik-8DD"/>
+                        <outlet property="totalPoints" destination="5Rx-PJ-qtw" id="O9g-cy-2Zm"/>
+                        <outlet property="winningPercent" destination="4gU-92-qi4" id="p2F-LH-lwR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h1b-vJ-xks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391" y="1918"/>
+        </scene>
+        <!--Enter Match Stats View Controller-->
+        <scene sceneID="M2U-Sa-RJI">
+            <objects>
+                <viewController storyboardIdentifier="EnterMatchStats" id="wgl-W4-J17" customClass="EnterMatchStatsViewController" customModule="TEPLZ_Racquetball___1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="msD-gl-W7p"/>
+                        <viewControllerLayoutGuide type="bottom" id="pah-bv-t6L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JPX-Lt-2ZE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Match Stats" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoW-iY-X3y">
+                                <rect key="frame" x="231" y="118" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" background="Match Points" translatesAutoresizingMaskIntoConstraints="NO" id="nLi-DK-7Sk">
+                                <rect key="frame" x="277" y="271" width="47" height="30"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="15">
+                                        <attributes>
+                                            <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="12" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qV7-0F-GYy">
+                                <rect key="frame" x="276" y="363" width="49" height="30"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitMatch:" destination="wgl-W4-J17" eventType="touchUpInside" id="d3d-1p-XtA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Match Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1n-BO-WHz">
+                                <rect key="frame" x="171" y="275" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kB7-UX-tg0">
+                                <rect key="frame" x="173" y="196" width="254" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="indexChanged:" destination="wgl-W4-J17" eventType="valueChanged" id="jSX-J9-EXl"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i78-bE-Lbi">
+                                <rect key="frame" x="275" y="167" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="enterMatchPoints" destination="nLi-DK-7Sk" id="Bbc-Tb-7YV"/>
+                        <outlet property="segmentedControl" destination="kB7-UX-tg0" id="f32-J0-89Z"/>
+                        <outlet property="textLabel" destination="i78-bE-Lbi" id="A4k-MQ-Ihv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qa3-QC-5eh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391" y="1203"/>
+        </scene>
+        <!--Advanced Lessons-->
+        <scene sceneID="bWE-fd-6z3">
+            <objects>
+                <viewController storyboardIdentifier="AdvancedLessons" title="Advanced Lessons" id="kjv-tL-Jyk" customClass="AdvancedLessonsViewController" customModule="TEPLZ_Racquetball___1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PYc-Kl-BZW"/>
+                        <viewControllerLayoutGuide type="bottom" id="A1D-TW-vv9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TK2-ty-YYg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsM-XX-fXq">
+                                <rect key="frame" x="210" y="371" width="180" height="108"/>
+                                <state key="normal" title="Button" image="Eketelon_O3_SIlver">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ldn-6e-cCG" kind="show" id="njS-F4-gYk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWh-uj-osY">
+                                <rect key="frame" x="210" y="57" width="180" height="108"/>
+                                <state key="normal" title="Button" image="Eketelon_O3_SIlver">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JdV-Jh-q0n" kind="show" id="owF-5f-gqx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Basic Shots" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSz-4c-E7E">
+                                <rect key="frame" x="254" y="157" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="T.A.S.S." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJr-C5-JkK">
+                                <rect key="frame" x="270" y="470" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Advanced Lessons" image="second" id="lRa-Ip-VG2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ASh-s2-UjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182" y="1092"/>
+        </scene>
+        <!--T.A.S.S. webview-->
+        <scene sceneID="QT7-mb-fWL">
+            <objects>
+                <viewController storyboardIdentifier="TASS" title="T.A.S.S. webview" id="Ldn-6e-cCG" customClass="TASSViewController" customModule="TEPLZ_Racquetball___1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gEa-El-1np"/>
+                        <viewControllerLayoutGuide type="bottom" id="c49-XD-ph8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZCp-uj-NZL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vpx-An-5J7">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Vpx-An-5J7" id="4CX-gr-KtA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQ2-n4-J3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182" y="1860"/>
+        </scene>
+        <!--Basic Shots-->
+        <scene sceneID="lom-UF-IuO">
+            <objects>
+                <viewController storyboardIdentifier="BasicShots" title="Basic Shots" id="rhR-N1-oAs" customClass="BasicShotsViewController" customModule="TEPLZ_Racquetball___1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gq0-OQ-lbs"/>
+                        <viewControllerLayoutGuide type="bottom" id="gbL-hd-RKa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jXc-SO-VbL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jFe-OJ-FaD">
+                                <rect key="frame" x="16" y="129" width="568" height="422"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="basicShotCell" rowHeight="100" id="Tpe-nS-rtu">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tpe-nS-rtu" id="3sf-Vh-1Fa">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVH-9z-4LQ">
+                                                    <rect key="frame" x="263" y="74" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eKu-ZN-jzN">
+                                                    <rect key="frame" x="239" y="8" width="90" height="65"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="0JJ-vK-DxA" kind="show" id="gmS-cc-Gsb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rhR-N1-oAs" id="OWm-QO-PHQ"/>
+                                    <outlet property="delegate" destination="rhR-N1-oAs" id="nwW-lj-Kdn"/>
+                                </connections>
+                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dOk-cJ-HaT">
+                                <rect key="frame" x="16" y="72" width="568" height="96"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">There are eight (8) basic racquetball shots used during a rally; all may be hit with a forehand or backhand and to either side of the court.  </string>
+                                        <attributes>
+                                            <font key="NSFont" size="13" name="Verdana-Bold"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Many variations can be used by simply changing the vertical or horizontal angles. Speed is also a factor, since most shots will lose their effectiveness if hit too fast or too slow. (Illustrations are arranged for ease of explanation, not by the order of learning shot)</string>
+                                        <attributes>
+                                            <font key="NSFont" size="13" name="Verdana"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gXG-DJ-tzt">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="4Y9-Po-zu1"/>
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="PRZ-y2-pc3"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="jFe-OJ-FaD" id="jNU-rr-Xy5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k9b-4j-3hJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2492" y="1092"/>
+        </scene>
+        <!--Basic Shot Detail View-->
+        <scene sceneID="qaO-ro-Ffl">
+            <objects>
+                <viewController storyboardIdentifier="BasicShotsDetail" title="Basic Shot Detail View" id="0JJ-vK-DxA" customClass="BasicShotDetailViewController" customModule="TEPLZ_Racquetball___1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AJq-h7-GB7"/>
+                        <viewControllerLayoutGuide type="bottom" id="kfY-BT-VTS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dEZ-QF-rTT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Lu-ma-rKC">
+                                <rect key="frame" x="16" y="337" width="584" height="197"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VXn-vd-TsC">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Basic Shot" id="ySw-oC-0Dv">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="FeS-sF-r6P"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QzZ-7v-Nr6">
+                                <rect key="frame" x="0.0" y="62" width="600" height="267"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentImage" destination="QzZ-7v-Nr6" id="u0M-VF-ruQ"/>
+                        <outlet property="currentText" destination="6Lu-ma-rKC" id="V3z-ls-Fqn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w5r-TP-rqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3240" y="1092"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8eu-pC-DjJ">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gob-9Z-Fe2" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="N99-vX-ngC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2z6-85-ooY" kind="relationship" relationship="viewControllers" id="082-Xl-eRX"/>
+                        <segue destination="kjv-tL-Jyk" kind="relationship" relationship="viewControllers" id="L72-C1-xy8"/>
+                        <segue destination="8vk-EG-o3l" kind="relationship" relationship="viewControllers" id="fiz-lY-Cep"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0au-8C-rEv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-824" y="308"/>
+        </scene>
+        <!--Quick Play-->
+        <scene sceneID="QEo-WD-OoS">
+            <objects>
+                <navigationController storyboardIdentifier="qpNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="2z6-85-ooY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Quick Play" image="first" id="geX-jw-hP3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wPt-1e-YLG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0dh-dB-r1Q" kind="relationship" relationship="rootViewController" id="QAp-RA-n72"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yHE-QI-Zey" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="308"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b72-rP-rVd">
+            <objects>
+                <navigationController storyboardIdentifier="basicShotsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="JdV-Jh-q0n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iqe-2B-h9a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rhR-N1-oAs" kind="relationship" relationship="rootViewController" id="f7G-Ns-dqS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8J-Ho-BS9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1836" y="1092"/>
+        </scene>
+        <!--LeaderBoard-->
+        <scene sceneID="JV7-B6-gFV">
+            <objects>
+                <navigationController storyboardIdentifier="leaderboardNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="8vk-EG-o3l" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="LeaderBoard" image="first" id="bHy-4B-BY0" userLabel="LeaderBoard"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="R8u-9j-Ngj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tqu-3I-QHF" kind="relationship" relationship="rootViewController" id="BBR-2L-PBE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6F-eU-gt0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1809" y="1203"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Eketelon_O3_SIlver" width="500" height="334"/>
+        <image name="Match Points" width="30" height="30"/>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="XtE-or-Bj0"/>
+    </inferredMetricsTieBreakers>
+</document>
