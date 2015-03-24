@@ -35,7 +35,7 @@ class QuickPlayTableViewController: UITableViewController {
         newSection = QuickPlay(name: "Scoring", sectionName: "Scoring and Varitions", sectionImage: "guy_hitting_racquetball_fr4.png", sectionDetailText: "Points can only be scored by the serving player or serving team in a doubles game, and points are the result of winning a rally that began with a successful serve. \n" + "During play, a player loses the rally if any one of the following occurs: \n" + "The ball bounces on the floor more than once before being struck. \n" + "The ball skips, or does not reach the front wall on the fly. \n" + "The ball flies into the spectator's gallery or wall opening or strikes an out-of-bounds surface above the court's normal playing area. \n" + "A slow ball strikes another player without the estimated speed and/or direction to strike the front wall. \n" + "A ball struck by a player hits that player or that player's partner. \n" + "A penalized hindrance. \n" + "Switching racquet hands during a rally. \n" + "Touching the ball with either the body or uniform.", sectionDetailImage: "racquetball_rules-never_give_up")
         sections.append(newSection)
        
-        dump(sections)
+        // dump(sections)
 
         
         // Uncomment the following line to preserve selection between presentations
