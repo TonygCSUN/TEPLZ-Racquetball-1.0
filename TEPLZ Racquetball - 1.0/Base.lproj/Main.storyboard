@@ -625,14 +625,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Lu-ma-rKC">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Lu-ma-rKC">
                                 <rect key="frame" x="16" y="337" width="584" height="197"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VXn-vd-TsC">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXn-vd-TsC">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Basic Shot" id="ySw-oC-0Dv">
@@ -640,11 +640,26 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QzZ-7v-Nr6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QzZ-7v-Nr6">
                                 <rect key="frame" x="0.0" y="62" width="600" height="267"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="267" id="zb0-Ak-uTg"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Lu-ma-rKC" firstAttribute="trailing" secondItem="QzZ-7v-Nr6" secondAttribute="trailing" id="2Tm-82-gIU"/>
+                            <constraint firstItem="kfY-BT-VTS" firstAttribute="top" secondItem="6Lu-ma-rKC" secondAttribute="bottom" constant="17" id="39a-30-mhJ"/>
+                            <constraint firstAttribute="trailing" secondItem="QzZ-7v-Nr6" secondAttribute="trailing" id="IQG-IU-rbK"/>
+                            <constraint firstItem="6Lu-ma-rKC" firstAttribute="top" secondItem="QzZ-7v-Nr6" secondAttribute="bottom" constant="8" symbolic="YES" id="LgO-6X-3y1"/>
+                            <constraint firstItem="VXn-vd-TsC" firstAttribute="bottom" secondItem="AJq-h7-GB7" secondAttribute="bottom" id="QQt-18-DrY"/>
+                            <constraint firstItem="6Lu-ma-rKC" firstAttribute="leading" secondItem="dEZ-QF-rTT" secondAttribute="leadingMargin" id="Vac-My-cF1"/>
+                            <constraint firstItem="VXn-vd-TsC" firstAttribute="leading" secondItem="QzZ-7v-Nr6" secondAttribute="leading" id="XTl-Ad-uCc"/>
+                            <constraint firstItem="QzZ-7v-Nr6" firstAttribute="top" secondItem="dEZ-QF-rTT" secondAttribute="topMargin" constant="62" id="d4P-xy-jeH"/>
+                            <constraint firstItem="QzZ-7v-Nr6" firstAttribute="leading" secondItem="dEZ-QF-rTT" secondAttribute="leading" id="fmp-8Y-PSu"/>
+                            <constraint firstItem="VXn-vd-TsC" firstAttribute="trailing" secondItem="QzZ-7v-Nr6" secondAttribute="trailing" id="vYC-u4-Ydt"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="currentImage" destination="QzZ-7v-Nr6" id="u0M-VF-ruQ"/>
