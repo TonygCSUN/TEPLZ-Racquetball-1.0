@@ -29,6 +29,8 @@
 		F9B20B711A9E48B7002D99F4 /* QuickPlayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B20B701A9E48B7002D99F4 /* QuickPlayTableViewController.swift */; };
 		F9B20B731A9E4904002D99F4 /* QuickPlayDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B20B721A9E4904002D99F4 /* QuickPlayDetailsViewController.swift */; };
 		F9B20B751A9E4940002D99F4 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B20B741A9E4940002D99F4 /* VideoViewController.swift */; };
+		F9D01FFF1AC10A4E0047120B /* QuickPlayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D01FFE1AC10A4E0047120B /* QuickPlayTableViewCell.swift */; };
+		F9D020011AC131A50047120B /* BasicShotsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D020001AC131A50047120B /* BasicShotsTableViewCell.swift */; };
 		F9E400961AB6253100B9C9BA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E400951AB6253100B9C9BA /* Accounts.framework */; };
 		F9E400A11AB625AB00B9C9BA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E400971AB625AB00B9C9BA /* CFNetwork.framework */; };
 		F9E400A21AB625AB00B9C9BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E400981AB625AB00B9C9BA /* CoreData.framework */; };
@@ -83,6 +85,8 @@
 		F9B20B701A9E48B7002D99F4 /* QuickPlayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickPlayTableViewController.swift; sourceTree = "<group>"; };
 		F9B20B721A9E4904002D99F4 /* QuickPlayDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickPlayDetailsViewController.swift; sourceTree = "<group>"; };
 		F9B20B741A9E4940002D99F4 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		F9D01FFE1AC10A4E0047120B /* QuickPlayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickPlayTableViewCell.swift; sourceTree = "<group>"; };
+		F9D020001AC131A50047120B /* BasicShotsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicShotsTableViewCell.swift; sourceTree = "<group>"; };
 		F9E4008F1AB6248900B9C9BA /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Bolts.framework; sourceTree = "<group>"; };
 		F9E400901AB6248900B9C9BA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Parse.framework; sourceTree = "<group>"; };
 		F9E400911AB6248900B9C9BA /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = ../ParseUI.framework; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 				F9B20B721A9E4904002D99F4 /* QuickPlayDetailsViewController.swift */,
 				F9B20B701A9E48B7002D99F4 /* QuickPlayTableViewController.swift */,
 				F9B20B6E1A9E4795002D99F4 /* QuickPlay.swift */,
+				F9D01FFE1AC10A4E0047120B /* QuickPlayTableViewCell.swift */,
 				F9B20B741A9E4940002D99F4 /* VideoViewController.swift */,
 				F9209FEC1ABE547200CCF6B7 /* AdvancedLessonsViewController.swift */,
 				F98319631AA3EE3C00DF59C7 /* BasicShotsViewController.swift */,
@@ -200,6 +205,7 @@
 				F90735B41ABE4FBA00657310 /* EnterMatchStatsViewController.swift */,
 				F90735AE1ABE4EB100657310 /* SignUpViewController.swift */,
 				F90735B61ABE501900657310 /* MyStatsViewController.swift */,
+				F9D020001AC131A50047120B /* BasicShotsTableViewCell.swift */,
 				F9B20B551A9E3BC6002D99F4 /* Images.xcassets */,
 				F9B20B571A9E3BC6002D99F4 /* LaunchScreen.xib */,
 				F9B20B4C1A9E3BC6002D99F4 /* Supporting Files */,
@@ -340,12 +346,14 @@
 				F9B20B4F1A9E3BC6002D99F4 /* AppDelegate.swift in Sources */,
 				F9B20B6F1A9E4795002D99F4 /* QuickPlay.swift in Sources */,
 				F9209FF11ABE54B100CCF6B7 /* BasicShot.swift in Sources */,
+				F9D01FFF1AC10A4E0047120B /* QuickPlayTableViewCell.swift in Sources */,
 				F90735AF1ABE4EB100657310 /* SignUpViewController.swift in Sources */,
 				F9B20B711A9E48B7002D99F4 /* QuickPlayTableViewController.swift in Sources */,
 				F9209FEF1ABE549C00CCF6B7 /* BasicShotDetailViewController.swift in Sources */,
 				F9B20B751A9E4940002D99F4 /* VideoViewController.swift in Sources */,
 				F9B20B731A9E4904002D99F4 /* QuickPlayDetailsViewController.swift in Sources */,
 				F9209FEB1ABE545F00CCF6B7 /* TASSViewController.swift in Sources */,
+				F9D020011AC131A50047120B /* BasicShotsTableViewCell.swift in Sources */,
 				F90735B51ABE4FBA00657310 /* EnterMatchStatsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

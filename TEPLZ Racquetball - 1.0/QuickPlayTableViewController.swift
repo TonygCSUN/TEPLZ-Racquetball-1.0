@@ -19,8 +19,11 @@ class QuickPlayTableViewController: UITableViewController {
     
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         
         var newSection = QuickPlay(name: "Rules", sectionName: "Rules of the Game", sectionImage: "racquetball_player-2-fr1.png", sectionDetailText: "Play begins with the serve." + " The serving player must bounce the ball" + " on the floor once and hit it directly to the front wall," + " making the ball hit the floor." + "  Other fault serves include a ceiling serve in which the ball touches the ceiling after the front wall and serving before the receiving" + " player is ready. Also, the server must wait until the ball passes the short line before stepping out of the service box, otherwise it is a fault serve.or beyond the short line; otherwise the serve counts as a fault. The ball may touch one side wall, but not two, prior to hitting the floor; hitting both side walls after the front wall (but before the floor) is a 'three wall serve,' and a fault. Also, serving the ball into the front wall so that it rebounds to the back wall without hitting the floor first is a long serve, and a fault.  If the server hits the ball directly to any surface other than the front wall the server immediately loses serve regardless of whether it was first or second serve.", sectionDetailImage: "Rules-and-Regs-349x227")
@@ -32,6 +35,8 @@ class QuickPlayTableViewController: UITableViewController {
         newSection = QuickPlay(name: "Scoring", sectionName: "Scoring and Varitions", sectionImage: "guy_hitting_racquetball_fr4.png", sectionDetailText: "Points can only be scored by the serving player or serving team in a doubles game, and points are the result of winning a rally that began with a successful serve. \n" + "During play, a player loses the rally if any one of the following occurs: \n" + "The ball bounces on the floor more than once before being struck. \n" + "The ball skips, or does not reach the front wall on the fly. \n" + "The ball flies into the spectator's gallery or wall opening or strikes an out-of-bounds surface above the court's normal playing area. \n" + "A slow ball strikes another player without the estimated speed and/or direction to strike the front wall. \n" + "A ball struck by a player hits that player or that player's partner. \n" + "A penalized hindrance. \n" + "Switching racquet hands during a rally. \n" + "Touching the ball with either the body or uniform.", sectionDetailImage: "racquetball_rules-never_give_up")
         sections.append(newSection)
        
+        dump(sections)
+
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -60,18 +65,24 @@ class QuickPlayTableViewController: UITableViewController {
     }
 
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 195
+    }
+    
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("quickPlayCell", forIndexPath: indexPath) as UITableViewCell
-
+        // let cell = self.tableView.dequeueReusableCellWithIdentifier("quickPlayCell", forIndexPath: indexPath) as UITableViewCell
+        var myCell:QuickPlayTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("quickPlayCell", forIndexPath: indexPath) as QuickPlayTableViewCell
+        
         // Configure the cell...
         var newSection = sections[indexPath.row]
-        cell.textLabel?.text = newSection.sectionName
-        cell.imageView?.image = UIImage(named: newSection.sectionImage)
+        myCell.textLabel2?.text = newSection.sectionName
+        myCell.imageView2?.image = UIImage(named: newSection.sectionImage)
         
         
         // test 4
 
-        return cell
+        return myCell
     }
     
 
