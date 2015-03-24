@@ -244,14 +244,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnk-Pp-Qeb">
-                                <rect key="frame" x="221" y="105" width="158" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnk-Pp-Qeb">
+                                <rect key="frame" x="16" y="105" width="568" height="30"/>
                                 <state key="normal" title="LeaderBoard Top Stats">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzQ-0K-V56">
-                                <rect key="frame" x="277" y="294" width="61" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzQ-0K-V56">
+                                <rect key="frame" x="16" y="267" width="568" height="30"/>
                                 <state key="normal" title="My Stats">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -259,17 +259,8 @@
                                     <segue destination="gez-Ii-1sJ" kind="show" id="D8A-YE-OAF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSN-Kx-y9Q">
-                                <rect key="frame" x="283" y="478" width="49" height="30"/>
-                                <state key="normal" title="Logout">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logout:" destination="Tqu-3I-QHF" eventType="touchUpInside" id="JuI-h9-tCd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzM-eY-kOt">
-                                <rect key="frame" x="245" y="198" width="124" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzM-eY-kOt">
+                                <rect key="frame" x="16" y="184" width="568" height="30"/>
                                 <state key="normal" title="Enter Match Stats">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -277,8 +268,31 @@
                                     <segue destination="wgl-W4-J17" kind="show" id="2ke-P2-kf6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSN-Kx-y9Q">
+                                <rect key="frame" x="16" y="497" width="568" height="30"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout:" destination="Tqu-3I-QHF" eventType="touchUpInside" id="JuI-h9-tCd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BzM-eY-kOt" firstAttribute="leading" secondItem="tnk-Pp-Qeb" secondAttribute="leading" id="ASH-hV-hN1"/>
+                            <constraint firstItem="55I-QH-9lV" firstAttribute="top" secondItem="BSN-Kx-y9Q" secondAttribute="bottom" constant="73" id="Dca-S7-5aL"/>
+                            <constraint firstItem="BSN-Kx-y9Q" firstAttribute="trailing" secondItem="uzQ-0K-V56" secondAttribute="trailing" id="GIk-AL-aGU"/>
+                            <constraint firstItem="BzM-eY-kOt" firstAttribute="top" secondItem="tnk-Pp-Qeb" secondAttribute="bottom" constant="49" id="UCz-FA-weC"/>
+                            <constraint firstItem="tnk-Pp-Qeb" firstAttribute="top" secondItem="Ld4-U4-O7Q" secondAttribute="bottom" constant="41" id="XlF-VQ-9BA"/>
+                            <constraint firstItem="BSN-Kx-y9Q" firstAttribute="trailing" secondItem="gfE-K5-sd0" secondAttribute="trailingMargin" id="cAx-DR-DPp"/>
+                            <constraint firstItem="BSN-Kx-y9Q" firstAttribute="leading" secondItem="uzQ-0K-V56" secondAttribute="leading" id="haL-e5-WjX"/>
+                            <constraint firstItem="uzQ-0K-V56" firstAttribute="top" secondItem="BzM-eY-kOt" secondAttribute="bottom" constant="53" id="jv0-qA-kkK"/>
+                            <constraint firstItem="BzM-eY-kOt" firstAttribute="trailing" secondItem="tnk-Pp-Qeb" secondAttribute="trailing" id="mah-q1-4gT"/>
+                            <constraint firstItem="uzQ-0K-V56" firstAttribute="trailing" secondItem="BzM-eY-kOt" secondAttribute="trailing" id="oug-BO-1ar"/>
+                            <constraint firstItem="uzQ-0K-V56" firstAttribute="leading" secondItem="BzM-eY-kOt" secondAttribute="leading" id="um8-2T-gjl"/>
+                            <constraint firstItem="uzQ-0K-V56" firstAttribute="leading" secondItem="gfE-K5-sd0" secondAttribute="leadingMargin" id="yUb-yC-r8h"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="LeaderBoard" id="HhY-YV-owU"/>
                     <connections>
