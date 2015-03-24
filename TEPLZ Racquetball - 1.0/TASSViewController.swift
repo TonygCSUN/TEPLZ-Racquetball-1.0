@@ -16,7 +16,7 @@ class TASSViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = NSURL(string: "https://sites.google.com/site/lessonsinracquetball/")
+        let url = NSURL(string: "https://sites.google.com/site/lessonsinracquetball/home/cscl-activities/cscs-investigations-you-have-created/cscl-lesson-4")
         // let requestURL = NSURL(string: url)
         let request = NSURLRequest(URL: url!)
         webView.loadRequest(request)
