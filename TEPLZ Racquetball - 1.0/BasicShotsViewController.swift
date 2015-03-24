@@ -75,16 +75,22 @@ class BasicShotsViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 125
+    }
+    
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("basicShotCell", forIndexPath: indexPath) as UITableViewCell
+        var myCell:BasicShotsTableViewCell = tableView.dequeueReusableCellWithIdentifier("basicShotCell", forIndexPath: indexPath) as BasicShotsTableViewCell
+        
         var newSection = sections[indexPath.row]
         
         // Configure the cell...
-        cell.textLabel?.text = newSection.sectionName
-        cell.imageView?.image = UIImage(named: newSection.sectionImage)
+        myCell.basicShotLabel?.text = newSection.sectionName
+        myCell.basicShotImage?.image = UIImage(named: newSection.sectionImage)
         
 
-        return cell
+        return myCell
 }
 
 

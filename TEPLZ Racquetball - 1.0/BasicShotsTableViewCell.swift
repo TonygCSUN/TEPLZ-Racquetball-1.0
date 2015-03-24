@@ -10,6 +10,16 @@ import UIKit
 
 class BasicShotsTableViewCell: UITableViewCell {
 
+    
+    
+    @IBOutlet weak var basicShotImage: UIImageView!
+    
+    
+    
+    @IBOutlet weak var basicShotLabel: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
