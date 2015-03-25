@@ -13,7 +13,7 @@ class MyStatsViewController: UIViewController {
     
     var scores = [String]()
     var objectIDs = [String]()
-    var results = [Int]()
+    var results = [Bool]()
     var totalMatches = Int()
     
     
@@ -79,7 +79,7 @@ class MyStatsViewController: UIViewController {
                     
                     self.scores.append(object ["score"] as String)
                     self.objectIDs.append(object ["objectId"] as String)
-                    self.results.append(object ["result"] as Int)
+                    self.results.append(object ["result"] as Bool)
                     
                     self.totalGames?.text = object[self.scores.count] as? String
                     
@@ -103,7 +103,7 @@ class MyStatsViewController: UIViewController {
                 if error == nil {
                     println("you have Won \(count) games")
                     
-                    self.results.append(objects.count)
+                    self.results.append(objects.isEmpty)
                     
                     
                 }
@@ -116,7 +116,7 @@ class MyStatsViewController: UIViewController {
                 if error == nil {
                     println("you have Won \(count) points")
                     
-                    self.results.append(objects.count)
+                    self.results.append(objects.isEmpty)
                     
                     
                 }
@@ -220,7 +220,8 @@ class MyStatsViewController: UIViewController {
         super.viewDidLoad()
 
 
-       
+       // totalGames.text = results.count as? String
+        
         
         
         // Do any additional setup after loading the view.
