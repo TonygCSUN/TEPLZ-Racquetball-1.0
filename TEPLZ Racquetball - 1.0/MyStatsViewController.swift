@@ -16,6 +16,10 @@ class MyStatsViewController: UIViewController {
     var results = [Bool]()
     var totalMatches = Int()
     
+    // var wonMatches = []()
+    // var lostMatches = []()
+    
+    
     
     
     
@@ -58,13 +62,17 @@ class MyStatsViewController: UIViewController {
         // getScoreDataQuery.whereKey("score", lessThan: 15)
         // getScoreDataQuery.whereKey("result", equalTo: false)
         getScoreDataQuery.selectKeys(["result", "score"])
-        getScoreDataQuery.whereKey("results", containsAllObjectsInArray: [false])
+        getScoreDataQuery.whereKey("results", containsAllObjectsInArray: [true])
         
         getScoreDataQuery.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 // objects in results will only contain the playerName and score fields
-                println("Successfully retrieved \(objects.count) scores.")
+                println("Successfully FOUND retrieved \(objects.count) scores.")
+                
+                // self.results.isEmpty
+                // self.results.append(objects.isEmpty)
+                
                 
                 dump(self.scores)
                 dump(self.objectIDs)
@@ -103,7 +111,7 @@ class MyStatsViewController: UIViewController {
                 if error == nil {
                     println("you have Won \(count) games")
                     
-                    self.results.append(objects.isEmpty)
+                    // self.results.append(objects.isEmpty)
                     
                     
                 }
@@ -116,16 +124,129 @@ class MyStatsViewController: UIViewController {
                 if error == nil {
                     println("you have Won \(count) points")
                     
-                    self.results.append(objects.isEmpty)
+                    // self.results.append(objects.isEmpty)
                     
                     
                 }
             }
             
+            /////////////
             
+            var wonMatchesQuery = PFQuery(className:"Match")
+            wonMatchesQuery.whereKey("result", equalTo: true)
+            wonMatchesQuery.findObjectsInBackgroundWithBlock {
+                (objects: [AnyObject]!, error: NSError!) -> Void in
+                if error == nil {
+                    // The find succeeded.
+                    println("You have WON \(objects.count) games.")
+                    // Do something with the found objects
+                    if let objects = objects as? [PFObject] {
+                        for object in objects {
+                            println(object.objectId)
+                        }
+                    }
+                } else {
+                    // Log details of the failure
+                    println("Error: \(error) \(error.userInfo!)")
+                }
+            }
+            
+            
+            
+            
+            
+            /////////////
             
            
         
+            /////////////
+            
+            var lostMatchesQuery = PFQuery(className:"Match")
+            lostMatchesQuery.whereKey("result", equalTo: true)
+            lostMatchesQuery.findObjectsInBackgroundWithBlock {
+                (objects: [AnyObject]!, error: NSError!) -> Void in
+                if error == nil {
+                    // The find succeeded.
+                    println("You've LOST \(objects.count) games.")
+                    // Do something with the found objects
+                    if let objects = objects as? [PFObject] {
+                        
+                        self.results.append(objects.isEmpty)
+                        
+                        var lostMatches = ""
+                        
+                        for object in objects {
+                            println(object.objectId)
+                            
+                            lostMatches = (object.objectId)
+                            
+                            // dump(lostMatches)
+                            
+                            // var allMatches =
+                            
+                            self.results.count
+                            
+                            println(self.results)
+                            
+                            
+                        }
+                    }
+                } else {
+                    // Log details of the failure
+                    println("Error: \(error) \(error.userInfo!)")
+                }
+            }
+            
+            
+            
+            
+            
+            /////////////
+            
+            
+           
+            /////////////
+            
+            var moreLostMatchesQuery = PFQuery(className:"Match")
+            moreLostMatchesQuery.whereKey("result", equalTo:PFUser.currentUser())
+            moreLostMatchesQuery.findObjectsInBackgroundWithBlock {
+                (objects: [AnyObject]!, error: NSError!) -> Void in
+                if error == nil {
+                    // The find succeeded.
+                    println("You've LOST \(objects.count) games.")
+                    // Do something with the found objects
+                    if let objects = objects as? [PFObject] {
+                        
+                        var lostMatches = ""
+                        
+                        for object in objects {
+                            println(object.objectId)
+                            
+                            lostMatches = (object.objectId)
+                            
+                            dump(lostMatches)
+                            
+                            // var allMatches =
+                            
+                            
+                        }
+                    }
+                } else {
+                    // Log details of the failure
+                    println("Error: \(error) \(error.userInfo!)")
+                }
+            }
+            
+            
+            
+            
+            
+            /////////////
+
+            
+            
+            
+            
         
         //////////////////////////////////////////
         //////////////////////////////////////////
@@ -308,6 +429,13 @@ class MyStatsViewController: UIViewController {
 }
 
 
+// note to self: calulate percentage:
+// percentage = 50;
+// totalMatches = 350;
+
+// winPercentage = (percentage / 100) * totalMatches;
+//
+//
 
 
 
