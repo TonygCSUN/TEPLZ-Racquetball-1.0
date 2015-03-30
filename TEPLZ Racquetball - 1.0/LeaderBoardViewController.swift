@@ -8,9 +8,9 @@
 
 import UIKit
 
-class LeaderBoardViewController: UIViewController {
+class LeaderBoardViewController: UIViewController, ESTBeaconManagerDelegate {
 
-    
+    let beaconManager : ESTBeaconManager = ESTBeaconManager()
     
     
     
@@ -30,7 +30,75 @@ class LeaderBoardViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //set beacon manager delegate
+        beaconManager.delegate = self;
+        
+        //create the beacon region
+        var beaconRegion : ESTBeaconRegion = ESTBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D"), major: 26050, minor: 64706, identifier: "regionName")
+        
+        //Opt in to be notified upon entering and exiting region
+        beaconRegion.notifyOnEntry = true
+        beaconRegion.notifyOnExit = true
+        
+        //beacon manager asks permission from user
+        beaconManager.startRangingBeaconsInRegion(beaconRegion)
+        beaconManager.startMonitoringForRegion(beaconRegion)
+        beaconManager.requestAlwaysAuthorization()
     }
+    
+
+    @IBAction func beaconPage(sender: AnyObject)
+    {
+        //
+        
+    }
+    
+    func beaconManager(manager: ESTBeaconManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: ESTBeaconRegion!) {
+        
+        if beacons.count > 0 {
+            var firstBeacon : ESTBeacon = beacons.first! as ESTBeacon
+            
+            
+            
+            // self.beaconLabel.text = ("\(textForPromimity(firstBeacon.proximity))")
+            
+        }
+    }
+    //
+    /*
+    func textForPromimity(proximity:CLProximity) -> (NSString)
+    {
+        var distance : NSString!
+        
+        switch(proximity)
+        {
+        case .Far:
+            println("Far")
+            distance = "far"
+            beaconLabel.textColor = UIColor.redColor()
+            return distance
+        case .Near:
+            println("Near")
+            distance = "Near"
+            beaconLabel.textColor = UIColor.purpleColor()
+            return distance
+        case .Immediate:
+            println("Immediate")
+            distance = "Immediate"
+            beaconLabel.textColor = UIColor.greenColor()
+            return distance
+        case .Unknown:
+            println("Unknown")
+            distance = "Unknown"
+            return distance
+        default:
+            break;
+        }
+        return distance
+    }
+    //
+    */
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

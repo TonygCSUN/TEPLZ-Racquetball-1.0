@@ -17,4 +17,7 @@
 
 
 #import <Parse/Parse.h>
+#import "ESTBeaconManager.h"
+#import "SwiftyJSON.h"
+
 

@@ -11,6 +11,9 @@
 		F90735B11ABE4F0200657310 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90735B01ABE4F0200657310 /* LeaderboardViewController.swift */; };
 		F90735B51ABE4FBA00657310 /* EnterMatchStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90735B41ABE4FBA00657310 /* EnterMatchStatsViewController.swift */; };
 		F90735B71ABE501900657310 /* MyStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90735B61ABE501900657310 /* MyStatsViewController.swift */; };
+		F909ABE71AC7BBA600505086 /* BeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F909ABE61AC7BBA600505086 /* BeaconViewController.swift */; };
+		F909ABE91AC87A8D00505086 /* BeaconDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F909ABE81AC87A8D00505086 /* BeaconDetailsViewController.swift */; };
+		F909ABEB1AC8C56D00505086 /* BeaconDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F909ABEA1AC8C56D00505086 /* BeaconDemoViewController.swift */; };
 		F9209FEB1ABE545F00CCF6B7 /* TASSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9209FEA1ABE545F00CCF6B7 /* TASSViewController.swift */; };
 		F9209FED1ABE547200CCF6B7 /* AdvancedLessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9209FEC1ABE547200CCF6B7 /* AdvancedLessonsViewController.swift */; };
 		F9209FEF1ABE549C00CCF6B7 /* BasicShotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9209FEE1ABE549C00CCF6B7 /* BasicShotDetailViewController.swift */; };
@@ -19,7 +22,17 @@
 		F9209FF61ABE58D900CCF6B7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9209FF31ABE58D900CCF6B7 /* Parse.framework */; };
 		F9209FF71ABE58D900CCF6B7 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9209FF41ABE58D900CCF6B7 /* ParseUI.framework */; };
 		F9209FF91ABE5BE200CCF6B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9209FF81ABE5BE200CCF6B7 /* AudioToolbox.framework */; };
+		F958BF5E1AC7A5EC00237A45 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F958BF531AC7A5EC00237A45 /* EstimoteSDK.framework */; };
+		F958BF5F1AC7A5EC00237A45 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F958BF541AC7A5EC00237A45 /* LICENSE */; };
+		F958BF601AC7A5EC00237A45 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F958BF551AC7A5EC00237A45 /* README.md */; };
+		F958BF611AC7A5EC00237A45 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F958BF591AC7A5EC00237A45 /* LICENSE */; };
+		F958BF621AC7A5EC00237A45 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F958BF5A1AC7A5EC00237A45 /* README.md */; };
+		F958BF631AC7A5EC00237A45 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F958BF5C1AC7A5EC00237A45 /* SwiftyJSON.swift */; };
+		F958BF651AC7A60500237A45 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = F958BF641AC7A60500237A45 /* podfile */; };
+		F958BF671AC7A6F800237A45 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F958BF661AC7A6F800237A45 /* libEstimoteSDK.a */; };
+		F958BF831AC7A7C500237A45 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F958BF821AC7A7C500237A45 /* libEstimoteSDK.a */; };
 		F98319641AA3EE3C00DF59C7 /* BasicShotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98319631AA3EE3C00DF59C7 /* BasicShotsViewController.swift */; };
+		F98DADF01AC68A64000AC0C4 /* CourtSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98DADEF1AC68A64000AC0C4 /* CourtSideViewController.swift */; };
 		F9B20B4F1A9E3BC6002D99F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B20B4E1A9E3BC6002D99F4 /* AppDelegate.swift */; };
 		F9B20B541A9E3BC6002D99F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9B20B521A9E3BC6002D99F4 /* Main.storyboard */; };
 		F9B20B561A9E3BC6002D99F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9B20B551A9E3BC6002D99F4 /* Images.xcassets */; };
@@ -63,6 +76,9 @@
 		F90735B01ABE4F0200657310 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		F90735B41ABE4FBA00657310 /* EnterMatchStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterMatchStatsViewController.swift; sourceTree = "<group>"; };
 		F90735B61ABE501900657310 /* MyStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStatsViewController.swift; sourceTree = "<group>"; };
+		F909ABE61AC7BBA600505086 /* BeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeaconViewController.swift; path = ../BeaconViewController.swift; sourceTree = "<group>"; };
+		F909ABE81AC87A8D00505086 /* BeaconDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconDetailsViewController.swift; sourceTree = "<group>"; };
+		F909ABEA1AC8C56D00505086 /* BeaconDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeaconDemoViewController.swift; path = ../BeaconDemoViewController.swift; sourceTree = "<group>"; };
 		F9209FEA1ABE545F00CCF6B7 /* TASSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TASSViewController.swift; sourceTree = "<group>"; };
 		F9209FEC1ABE547200CCF6B7 /* AdvancedLessonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedLessonsViewController.swift; sourceTree = "<group>"; };
 		F9209FEE1ABE549C00CCF6B7 /* BasicShotDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicShotDetailViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +87,43 @@
 		F9209FF31ABE58D900CCF6B7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F9209FF41ABE58D900CCF6B7 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		F9209FF81ABE5BE200CCF6B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F958BF531AC7A5EC00237A45 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
+		F958BF541AC7A5EC00237A45 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F958BF551AC7A5EC00237A45 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F958BF591AC7A5EC00237A45 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F958BF5A1AC7A5EC00237A45 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F958BF5C1AC7A5EC00237A45 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		F958BF641AC7A60500237A45 /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
+		F958BF661AC7A6F800237A45 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = "../../../../Downloads/iOS-SDK-master/EstimoteSDK/libEstimoteSDK.a"; sourceTree = "<group>"; };
+		F958BF6A1AC7A7C500237A45 /* ESTBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeacon.h; sourceTree = "<group>"; };
+		F958BF6B1AC7A7C500237A45 /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconDefinitions.h; sourceTree = "<group>"; };
+		F958BF6C1AC7A7C500237A45 /* ESTBeaconFirmwareVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconFirmwareVO.h; sourceTree = "<group>"; };
+		F958BF6D1AC7A7C500237A45 /* ESTBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconManager.h; sourceTree = "<group>"; };
+		F958BF6E1AC7A7C500237A45 /* ESTBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconRegion.h; sourceTree = "<group>"; };
+		F958BF6F1AC7A7C500237A45 /* ESTBeaconUpdateConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconUpdateConfig.h; sourceTree = "<group>"; };
+		F958BF701AC7A7C500237A45 /* ESTBeaconUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconUpdateInfo.h; sourceTree = "<group>"; };
+		F958BF711AC7A7C500237A45 /* ESTBeaconVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconVO.h; sourceTree = "<group>"; };
+		F958BF721AC7A7C500237A45 /* ESTBulkUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBulkUpdater.h; sourceTree = "<group>"; };
+		F958BF731AC7A7C500237A45 /* ESTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTConfig.h; sourceTree = "<group>"; };
+		F958BF741AC7A7C500237A45 /* ESTDateRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTDateRule.h; sourceTree = "<group>"; };
+		F958BF751AC7A7C500237A45 /* ESTDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTDefinitions.h; sourceTree = "<group>"; };
+		F958BF761AC7A7C500237A45 /* ESTFirmwareInfoVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTFirmwareInfoVO.h; sourceTree = "<group>"; };
+		F958BF771AC7A7C500237A45 /* ESTMotionRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTMotionRule.h; sourceTree = "<group>"; };
+		F958BF781AC7A7C500237A45 /* ESTNearable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearable.h; sourceTree = "<group>"; };
+		F958BF791AC7A7C500237A45 /* ESTNearableDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableDefinitions.h; sourceTree = "<group>"; };
+		F958BF7A1AC7A7C500237A45 /* ESTNearableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableManager.h; sourceTree = "<group>"; };
+		F958BF7B1AC7A7C500237A45 /* ESTNearableRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableRule.h; sourceTree = "<group>"; };
+		F958BF7C1AC7A7C500237A45 /* ESTOrientationRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTOrientationRule.h; sourceTree = "<group>"; };
+		F958BF7D1AC7A7C500237A45 /* ESTProximityRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTProximityRule.h; sourceTree = "<group>"; };
+		F958BF7E1AC7A7C500237A45 /* ESTRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRule.h; sourceTree = "<group>"; };
+		F958BF7F1AC7A7C500237A45 /* ESTTemperatureRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTTemperatureRule.h; sourceTree = "<group>"; };
+		F958BF801AC7A7C500237A45 /* ESTTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTTrigger.h; sourceTree = "<group>"; };
+		F958BF811AC7A7C500237A45 /* ESTTriggerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTTriggerManager.h; sourceTree = "<group>"; };
+		F958BF821AC7A7C500237A45 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEstimoteSDK.a; sourceTree = "<group>"; };
+		F958BF841AC7A89C00237A45 /* Estimote-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Estimote-Bridging-Header.h"; sourceTree = "<group>"; };
+		F958BF851AC7AD8100237A45 /* SwiftyJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SwiftyJSON.h; path = ../SwiftyJSON.h; sourceTree = "<group>"; };
 		F98319631AA3EE3C00DF59C7 /* BasicShotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicShotsViewController.swift; sourceTree = "<group>"; };
+		F98DADEF1AC68A64000AC0C4 /* CourtSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourtSideViewController.swift; path = ../CourtSideViewController.swift; sourceTree = "<group>"; };
 		F9B20B491A9E3BC6002D99F4 /* TEPLZ Racquetball - 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TEPLZ Racquetball - 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9B20B4D1A9E3BC6002D99F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9B20B4E1A9E3BC6002D99F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +165,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F958BF831AC7A7C500237A45 /* libEstimoteSDK.a in Frameworks */,
+				F958BF671AC7A6F800237A45 /* libEstimoteSDK.a in Frameworks */,
 				F9209FF91ABE5BE200CCF6B7 /* AudioToolbox.framework in Frameworks */,
+				F958BF5E1AC7A5EC00237A45 /* EstimoteSDK.framework in Frameworks */,
 				F9E400B21AB6261000B9C9BA /* libz.dylib in Frameworks */,
 				F9209FF51ABE58D900CCF6B7 /* Bolts.framework in Frameworks */,
 				F9E400B01AB625FF00B9C9BA /* Security.framework in Frameworks */,
@@ -145,9 +200,124 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F958BF501AC7A5EC00237A45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F958BF511AC7A5EC00237A45 /* EstimoteSDK */,
+				F958BF561AC7A5EC00237A45 /* Headers */,
+				F958BF571AC7A5EC00237A45 /* Local Podspecs */,
+				F958BF581AC7A5EC00237A45 /* SwiftyJSON */,
+				F958BF5D1AC7A5EC00237A45 /* Target Support Files */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F958BF511AC7A5EC00237A45 /* EstimoteSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F958BF521AC7A5EC00237A45 /* EstimoteSDK */,
+				F958BF541AC7A5EC00237A45 /* LICENSE */,
+				F958BF551AC7A5EC00237A45 /* README.md */,
+				F958BF841AC7A89C00237A45 /* Estimote-Bridging-Header.h */,
+			);
+			path = EstimoteSDK;
+			sourceTree = "<group>";
+		};
+		F958BF521AC7A5EC00237A45 /* EstimoteSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F958BF531AC7A5EC00237A45 /* EstimoteSDK.framework */,
+			);
+			path = EstimoteSDK;
+			sourceTree = "<group>";
+		};
+		F958BF561AC7A5EC00237A45 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		F958BF571AC7A5EC00237A45 /* Local Podspecs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Local Podspecs";
+			sourceTree = "<group>";
+		};
+		F958BF581AC7A5EC00237A45 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				F958BF591AC7A5EC00237A45 /* LICENSE */,
+				F958BF5A1AC7A5EC00237A45 /* README.md */,
+				F958BF5B1AC7A5EC00237A45 /* Source */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		F958BF5B1AC7A5EC00237A45 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F958BF851AC7AD8100237A45 /* SwiftyJSON.h */,
+				F958BF5C1AC7A5EC00237A45 /* SwiftyJSON.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F958BF5D1AC7A5EC00237A45 /* Target Support Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Target Support Files";
+			sourceTree = "<group>";
+		};
+		F958BF681AC7A7C500237A45 /* EstimoteSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F958BF691AC7A7C500237A45 /* Headers */,
+				F958BF821AC7A7C500237A45 /* libEstimoteSDK.a */,
+			);
+			path = EstimoteSDK;
+			sourceTree = "<group>";
+		};
+		F958BF691AC7A7C500237A45 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				F958BF6A1AC7A7C500237A45 /* ESTBeacon.h */,
+				F958BF6B1AC7A7C500237A45 /* ESTBeaconDefinitions.h */,
+				F958BF6C1AC7A7C500237A45 /* ESTBeaconFirmwareVO.h */,
+				F958BF6D1AC7A7C500237A45 /* ESTBeaconManager.h */,
+				F958BF6E1AC7A7C500237A45 /* ESTBeaconRegion.h */,
+				F958BF6F1AC7A7C500237A45 /* ESTBeaconUpdateConfig.h */,
+				F958BF701AC7A7C500237A45 /* ESTBeaconUpdateInfo.h */,
+				F958BF711AC7A7C500237A45 /* ESTBeaconVO.h */,
+				F958BF721AC7A7C500237A45 /* ESTBulkUpdater.h */,
+				F958BF731AC7A7C500237A45 /* ESTConfig.h */,
+				F958BF741AC7A7C500237A45 /* ESTDateRule.h */,
+				F958BF751AC7A7C500237A45 /* ESTDefinitions.h */,
+				F958BF761AC7A7C500237A45 /* ESTFirmwareInfoVO.h */,
+				F958BF771AC7A7C500237A45 /* ESTMotionRule.h */,
+				F958BF781AC7A7C500237A45 /* ESTNearable.h */,
+				F958BF791AC7A7C500237A45 /* ESTNearableDefinitions.h */,
+				F958BF7A1AC7A7C500237A45 /* ESTNearableManager.h */,
+				F958BF7B1AC7A7C500237A45 /* ESTNearableRule.h */,
+				F958BF7C1AC7A7C500237A45 /* ESTOrientationRule.h */,
+				F958BF7D1AC7A7C500237A45 /* ESTProximityRule.h */,
+				F958BF7E1AC7A7C500237A45 /* ESTRule.h */,
+				F958BF7F1AC7A7C500237A45 /* ESTTemperatureRule.h */,
+				F958BF801AC7A7C500237A45 /* ESTTrigger.h */,
+				F958BF811AC7A7C500237A45 /* ESTTriggerManager.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		F9B20B401A9E3BC6002D99F4 = {
 			isa = PBXGroup;
 			children = (
+				F958BF681AC7A7C500237A45 /* EstimoteSDK */,
+				F958BF661AC7A6F800237A45 /* libEstimoteSDK.a */,
+				F958BF641AC7A60500237A45 /* podfile */,
+				F958BF501AC7A5EC00237A45 /* Pods */,
 				F9209FF81ABE5BE200CCF6B7 /* AudioToolbox.framework */,
 				F9209FF21ABE58D900CCF6B7 /* Bolts.framework */,
 				F9209FF31ABE58D900CCF6B7 /* Parse.framework */,
@@ -190,8 +360,12 @@
 				F9E400901AB6248900B9C9BA /* Parse.framework */,
 				F9E400911AB6248900B9C9BA /* ParseUI.framework */,
 				F9B20B521A9E3BC6002D99F4 /* Main.storyboard */,
-				F9209FEA1ABE545F00CCF6B7 /* TASSViewController.swift */,
 				F9B20B4E1A9E3BC6002D99F4 /* AppDelegate.swift */,
+				F909ABE81AC87A8D00505086 /* BeaconDetailsViewController.swift */,
+				F909ABEA1AC8C56D00505086 /* BeaconDemoViewController.swift */,
+				F909ABE61AC7BBA600505086 /* BeaconViewController.swift */,
+				F98DADEF1AC68A64000AC0C4 /* CourtSideViewController.swift */,
+				F9209FEA1ABE545F00CCF6B7 /* TASSViewController.swift */,
 				F90735B01ABE4F0200657310 /* LeaderboardViewController.swift */,
 				F9B20B721A9E4904002D99F4 /* QuickPlayDetailsViewController.swift */,
 				F9B20B701A9E48B7002D99F4 /* QuickPlayTableViewController.swift */,
@@ -288,6 +462,11 @@
 					F9B20B481A9E3BC6002D99F4 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 3G2T5JZW4L;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					F9B20B5D1A9E3BC6002D99F4 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -319,9 +498,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F958BF651AC7A60500237A45 /* podfile in Resources */,
 				F9B20B541A9E3BC6002D99F4 /* Main.storyboard in Resources */,
 				F9B20B591A9E3BC6002D99F4 /* LaunchScreen.xib in Resources */,
+				F958BF5F1AC7A5EC00237A45 /* LICENSE in Resources */,
 				F9B20B561A9E3BC6002D99F4 /* Images.xcassets in Resources */,
+				F958BF611AC7A5EC00237A45 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,19 +524,26 @@
 				F90735B11ABE4F0200657310 /* LeaderboardViewController.swift in Sources */,
 				F90735B71ABE501900657310 /* MyStatsViewController.swift in Sources */,
 				F9209FED1ABE547200CCF6B7 /* AdvancedLessonsViewController.swift in Sources */,
+				F909ABE91AC87A8D00505086 /* BeaconDetailsViewController.swift in Sources */,
+				F958BF631AC7A5EC00237A45 /* SwiftyJSON.swift in Sources */,
 				F98319641AA3EE3C00DF59C7 /* BasicShotsViewController.swift in Sources */,
 				F9B20B4F1A9E3BC6002D99F4 /* AppDelegate.swift in Sources */,
 				F9B20B6F1A9E4795002D99F4 /* QuickPlay.swift in Sources */,
+				F958BF601AC7A5EC00237A45 /* README.md in Sources */,
 				F9209FF11ABE54B100CCF6B7 /* BasicShot.swift in Sources */,
 				F9D01FFF1AC10A4E0047120B /* QuickPlayTableViewCell.swift in Sources */,
+				F909ABE71AC7BBA600505086 /* BeaconViewController.swift in Sources */,
 				F90735AF1ABE4EB100657310 /* SignUpViewController.swift in Sources */,
 				F9B20B711A9E48B7002D99F4 /* QuickPlayTableViewController.swift in Sources */,
 				F9209FEF1ABE549C00CCF6B7 /* BasicShotDetailViewController.swift in Sources */,
+				F98DADF01AC68A64000AC0C4 /* CourtSideViewController.swift in Sources */,
+				F958BF621AC7A5EC00237A45 /* README.md in Sources */,
 				F9B20B751A9E4940002D99F4 /* VideoViewController.swift in Sources */,
 				F9B20B731A9E4904002D99F4 /* QuickPlayDetailsViewController.swift in Sources */,
 				F9209FEB1ABE545F00CCF6B7 /* TASSViewController.swift in Sources */,
 				F9D020011AC131A50047120B /* BasicShotsTableViewCell.swift in Sources */,
 				F90735B51ABE4FBA00657310 /* EnterMatchStatsViewController.swift in Sources */,
+				F909ABEB1AC8C56D00505086 /* BeaconDemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,9 +673,20 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Pods/EstimoteSDK/EstimoteSDK",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/EstimoteBeacons/EstimoteSDK/Headers",
 				);
 				INFOPLIST_FILE = "TEPLZ Racquetball - 1.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/tonyGuerrero/Downloads/iOS-SDK-master/EstimoteSDK",
+					"$(PROJECT_DIR)/EstimoteSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TEPLZRacquetball-Bridge-Header.h";
@@ -502,9 +702,20 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Pods/EstimoteSDK/EstimoteSDK",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/EstimoteBeacons/EstimoteSDK/Headers",
 				);
 				INFOPLIST_FILE = "TEPLZ Racquetball - 1.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/tonyGuerrero/Downloads/iOS-SDK-master/EstimoteSDK",
+					"$(PROJECT_DIR)/EstimoteSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TEPLZRacquetball-Bridge-Header.h";
