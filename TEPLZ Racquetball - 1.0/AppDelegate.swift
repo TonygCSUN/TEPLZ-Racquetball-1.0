@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate, ESTBeaconManagerDelegate {
 
     var window: UIWindow?
     var locationManager: CLLocationManager?
     var lastProximity: CLProximity?
+    let beaconManager : ESTBeaconManager = ESTBeaconManager()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -27,8 +29,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         // from SwiftEstimoteBeacons demo video phillydev716
         let settings = UIUserNotificationSettings(forTypes: .Alert, categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-        return true
         
+        ///////
+        
+        //set beacon manager delegate
+        beaconManager.delegate = self;
+        
+        //create the beacon region
+        var beaconRegion : ESTBeaconRegion = ESTBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D"), major: 18059, minor: 43132, identifier: "regionName")
+        
+        //Opt in to be notified upon entering and exiting region
+        beaconRegion.notifyOnEntry = true
+        beaconRegion.notifyOnExit = true
+        
+        //beacon manager asks permission from user
+        beaconManager.startRangingBeaconsInRegion(beaconRegion)
+        beaconManager.startMonitoringForRegion(beaconRegion)
+        beaconManager.requestAlwaysAuthorization()
+    
+    
+        ///////
+
+        return true
+    }
+    
+
+
+
+
+        /*
         // this is code to begin ranging iBeacons in the background
         
         let uuidString = "B9407F30-F5F8-466E-AFF9-25556B57FE6D"
@@ -57,13 +86,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                     categories: nil
                 )
             )
-        }
-
-
-        
+        } 
         
         return true
-    }
+        */
+}
+
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -88,12 +116,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     }
 
 
-}
+
 
 
 
 extension AppDelegate: CLLocationManagerDelegate {
     func sendLocalNotificationWithMessage(message: String!, playSound: Bool) {
+        
+        
+        ////
         let notification:UILocalNotification = UILocalNotification()
         notification.alertBody = message
         
@@ -107,14 +138,16 @@ extension AppDelegate: CLLocationManagerDelegate {
             
             notification.soundName = "tos_beep.caf";
         }
-        
+
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
+    
+    
     
     func locationManager(manager: CLLocationManager!,
         didRangeBeacons beacons: [AnyObject]!,
         inRegion region: CLBeaconRegion!) {
-            let viewController:BeaconDetailsViewController = window!.rootViewController as BeaconDetailsViewController
+            let viewController:ViewController = window!.rootViewController as ViewController
             viewController.beacons = beacons as [CLBeacon]?
             viewController.tableView!.reloadData()
             
@@ -176,4 +209,5 @@ extension AppDelegate: CLLocationManagerDelegate {
             sendLocalNotificationWithMessage("You exited the region", playSound: true)
     }
 }
+
 

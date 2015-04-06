@@ -22,6 +22,11 @@
 		F9209FF61ABE58D900CCF6B7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9209FF31ABE58D900CCF6B7 /* Parse.framework */; };
 		F9209FF71ABE58D900CCF6B7 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9209FF41ABE58D900CCF6B7 /* ParseUI.framework */; };
 		F9209FF91ABE5BE200CCF6B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9209FF81ABE5BE200CCF6B7 /* AudioToolbox.framework */; };
+		F940EEDD1ACA44A500E635FD /* CourtSideBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940EEDC1ACA44A500E635FD /* CourtSideBeaconViewController.swift */; };
+		F940EEDF1ACA44E900E635FD /* CourtSideBeaconTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940EEDE1ACA44E900E635FD /* CourtSideBeaconTableViewController.swift */; };
+		F940EEE11ACA699700E635FD /* tos_beep.caf in Resources */ = {isa = PBXBuildFile; fileRef = F940EEE01ACA699700E635FD /* tos_beep.caf */; };
+		F940EEE31ACA7BAA00E635FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940EEE21ACA7BAA00E635FD /* ViewController.swift */; };
+		F940EEE51ACA81A400E635FD /* StandardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940EEE41ACA81A400E635FD /* StandardTableViewController.swift */; };
 		F958BF5E1AC7A5EC00237A45 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F958BF531AC7A5EC00237A45 /* EstimoteSDK.framework */; };
 		F958BF5F1AC7A5EC00237A45 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F958BF541AC7A5EC00237A45 /* LICENSE */; };
 		F958BF601AC7A5EC00237A45 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F958BF551AC7A5EC00237A45 /* README.md */; };
@@ -87,6 +92,11 @@
 		F9209FF31ABE58D900CCF6B7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F9209FF41ABE58D900CCF6B7 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		F9209FF81ABE5BE200CCF6B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F940EEDC1ACA44A500E635FD /* CourtSideBeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourtSideBeaconViewController.swift; sourceTree = "<group>"; };
+		F940EEDE1ACA44E900E635FD /* CourtSideBeaconTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourtSideBeaconTableViewController.swift; sourceTree = "<group>"; };
+		F940EEE01ACA699700E635FD /* tos_beep.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tos_beep.caf; sourceTree = "<group>"; };
+		F940EEE21ACA7BAA00E635FD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F940EEE41ACA81A400E635FD /* StandardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardTableViewController.swift; sourceTree = "<group>"; };
 		F958BF531AC7A5EC00237A45 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 		F958BF541AC7A5EC00237A45 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F958BF551AC7A5EC00237A45 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -314,6 +324,10 @@
 		F9B20B401A9E3BC6002D99F4 = {
 			isa = PBXGroup;
 			children = (
+				F940EEE21ACA7BAA00E635FD /* ViewController.swift */,
+				F940EEE41ACA81A400E635FD /* StandardTableViewController.swift */,
+				F940EEDC1ACA44A500E635FD /* CourtSideBeaconViewController.swift */,
+				F940EEDE1ACA44E900E635FD /* CourtSideBeaconTableViewController.swift */,
 				F958BF681AC7A7C500237A45 /* EstimoteSDK */,
 				F958BF661AC7A6F800237A45 /* libEstimoteSDK.a */,
 				F958BF641AC7A60500237A45 /* podfile */,
@@ -390,6 +404,7 @@
 		F9B20B4C1A9E3BC6002D99F4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F940EEE01ACA699700E635FD /* tos_beep.caf */,
 				F9B20B4D1A9E3BC6002D99F4 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -503,6 +518,7 @@
 				F9B20B591A9E3BC6002D99F4 /* LaunchScreen.xib in Resources */,
 				F958BF5F1AC7A5EC00237A45 /* LICENSE in Resources */,
 				F9B20B561A9E3BC6002D99F4 /* Images.xcassets in Resources */,
+				F940EEE11ACA699700E635FD /* tos_beep.caf in Resources */,
 				F958BF611AC7A5EC00237A45 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,17 +539,20 @@
 			files = (
 				F90735B11ABE4F0200657310 /* LeaderboardViewController.swift in Sources */,
 				F90735B71ABE501900657310 /* MyStatsViewController.swift in Sources */,
+				F940EEE51ACA81A400E635FD /* StandardTableViewController.swift in Sources */,
 				F9209FED1ABE547200CCF6B7 /* AdvancedLessonsViewController.swift in Sources */,
 				F909ABE91AC87A8D00505086 /* BeaconDetailsViewController.swift in Sources */,
 				F958BF631AC7A5EC00237A45 /* SwiftyJSON.swift in Sources */,
 				F98319641AA3EE3C00DF59C7 /* BasicShotsViewController.swift in Sources */,
 				F9B20B4F1A9E3BC6002D99F4 /* AppDelegate.swift in Sources */,
 				F9B20B6F1A9E4795002D99F4 /* QuickPlay.swift in Sources */,
+				F940EEE31ACA7BAA00E635FD /* ViewController.swift in Sources */,
 				F958BF601AC7A5EC00237A45 /* README.md in Sources */,
 				F9209FF11ABE54B100CCF6B7 /* BasicShot.swift in Sources */,
 				F9D01FFF1AC10A4E0047120B /* QuickPlayTableViewCell.swift in Sources */,
 				F909ABE71AC7BBA600505086 /* BeaconViewController.swift in Sources */,
 				F90735AF1ABE4EB100657310 /* SignUpViewController.swift in Sources */,
+				F940EEDF1ACA44E900E635FD /* CourtSideBeaconTableViewController.swift in Sources */,
 				F9B20B711A9E48B7002D99F4 /* QuickPlayTableViewController.swift in Sources */,
 				F9209FEF1ABE549C00CCF6B7 /* BasicShotDetailViewController.swift in Sources */,
 				F98DADF01AC68A64000AC0C4 /* CourtSideViewController.swift in Sources */,
@@ -544,6 +563,7 @@
 				F9D020011AC131A50047120B /* BasicShotsTableViewCell.swift in Sources */,
 				F90735B51ABE4FBA00657310 /* EnterMatchStatsViewController.swift in Sources */,
 				F909ABEB1AC8C56D00505086 /* BeaconDemoViewController.swift in Sources */,
+				F940EEDD1ACA44A500E635FD /* CourtSideBeaconViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

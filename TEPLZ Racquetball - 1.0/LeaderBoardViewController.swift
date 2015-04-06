@@ -13,6 +13,20 @@ class LeaderBoardViewController: UIViewController, ESTBeaconManagerDelegate {
     let beaconManager : ESTBeaconManager = ESTBeaconManager()
     
     
+    @IBOutlet weak var username: UILabel!
+    
+    @IBAction func whoAmI(sender: AnyObject) {
+        if PFUser.currentUser() != nil {
+            
+            username.text = ("\(PFUser.currentUser())")
+            
+        }
+        else {
+            // reload()
+        }
+    }
+    
+    
     
     @IBOutlet weak var enterMatchStats: UIButton!
     

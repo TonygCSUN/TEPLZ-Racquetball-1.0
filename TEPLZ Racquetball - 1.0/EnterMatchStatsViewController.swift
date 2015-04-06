@@ -12,12 +12,131 @@ class EnterMatchStatsViewController: UIViewController,UINavigationControllerDele
 
     
     
+    
+    
+    @IBAction func getTotals(sender: AnyObject) {
+        
+        var queryWinTotals = PFUser.query()
+        // queryWinTotals.whereKey("username", equalTo: "")
+        queryWinTotals.whereKey("username", equalTo: PFUser.currentUser().username)
+        // queryWinTotals.whereKey("totalWins", equalTo: objectForKey("totalWins") as String)
+        queryWinTotals.findObjectsInBackgroundWithBlock
+            {(objects :[AnyObject]!, error: NSError!)->Void in
+                var objectOne: PFObject = objects[0] as PFObject
+                println("WOOP!")
+                // println(objects.debugDescription)
+                // println(objects.count)
+               
+
+                let json = JSON(objects)
+                
+                // let name = json["username"].stringValue
+                // println(json)
+                
+                // let user: Dictionary<String, JSON> = json["username"].dictionaryValue
+                // println(user)
+                
+                let list: Array<JSON> = json["list"].arrayValue
+                println(list)
+                
+        }
+        
+    }
+    
+    
+    
+    @IBAction func debug(sender: AnyObject) {
+        //
+        var query = PFUser.query()
+        query.whereKey("username", equalTo: "testparse1")
+        query.findObjectsInBackgroundWithBlock
+            {(objects :[AnyObject]!, error: NSError!)->Void in
+                var objectOne: PFObject = objects[0] as PFObject
+                println("WOOP!")
+                println(objects.debugDescription)
+                println(objects.count)
+        }
+        
+    }
+    
+    
+    @IBAction func checkIn(sender: AnyObject) {
+        
+        PFUser.currentUser().setObject(true, forKey: "activePlayer")
+        
+        PFUser.currentUser().saveInBackgroundWithBlock {
+            (success: Bool!, error: NSError!) -> Void in
+            
+            if (success != nil) {
+                println("Object modified")
+                
+            } else {
+                println("Error: \(error)")
+            }
+        }
+        
+    }
+    
+    
+    
+    @IBAction func activeCourtSide(sender: AnyObject) {
+        
+        var query = PFUser.query()
+        query.whereKey("activePlayer", equalTo: true)
+        query.findObjectsInBackgroundWithBlock
+            {(objects :[AnyObject]!, error: NSError!)->Void in
+                var objectOne: PFObject = objects[0] as PFObject
+                println("WOOP!")
+                println(objects.debugDescription)
+                println(objects.count)
+        }
+        
+    }
+    
+    
+    
+    
+    
+    @IBAction func checkOut(sender: AnyObject) {
+        
+        PFUser.currentUser().setObject(false, forKey: "activePlayer")
+        
+        PFUser.currentUser().saveInBackgroundWithBlock {
+            (success: Bool!, error: NSError!) -> Void in
+            
+            if (success != nil) {
+                println("Object created")
+                
+            } else {
+                println("Error: \(error)")
+            }
+        }
+        
+    }
+    
+    
+    
+    var currentWins: Int = 0
+    
+    var currentLosses: Int = 0
+    
+    var currentGames: Int = 0
+    
+    
     @IBOutlet weak var enterMatchPoints: UITextField!
     
     
     @IBAction func submitMatch(sender: AnyObject) {
     
+
+        if matchStatus == true {
+        currentWins = ++currentWins
+        }
+        else {
+            currentLosses = ++currentLosses
+        }
         
+        currentGames = ++currentGames
         
         var match = PFObject(className: "Match") // Score
         
@@ -27,11 +146,27 @@ class EnterMatchStatsViewController: UIViewController,UINavigationControllerDele
         
         match.setObject(matchStatus, forKey: "result")
         
+        /*
+        var queryGetMatchData = PFUser.query()
+        queryGetMatchData.whereKey("activePlayer", equalTo: true)
+        queryGetMatchData.findObjectsInBackgroundWithBlock
+            {(objects :[AnyObject]!, error: NSError!)->Void in
+                var objectOne: PFObject = objects[0] as PFObject
+                println("WOOP!")
+                println(objects.debugDescription)
+                println(objects.count)
+        }
+        */
+        
         match.saveInBackgroundWithBlock
             {(success: Bool!, error: NSError!) -> Void in
                 
                 if success == true {
                     println("Score created with ID: \(match.objectId)")
+                    println(self.currentWins)
+                    println(self.currentLosses)
+                    println(self.currentGames)
+                    
                 }
                 else {
                     println(error)
@@ -39,6 +174,8 @@ class EnterMatchStatsViewController: UIViewController,UINavigationControllerDele
                 
                 
         }
+        
+        
         
         
     }
@@ -96,29 +233,32 @@ class EnterMatchStatsViewController: UIViewController,UINavigationControllerDele
     
     var matchStatus = Bool()
     
+    // set a get function to get latest totalWins
+    // then set totalWins to that value
+    
+
+    
     @IBOutlet weak var textLabel: UILabel!
     
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    
-    @IBAction func indexChanged(sender: AnyObject)
-    {
-        //
-        switch segmentedControl.selectedSegmentIndex
-        {
-            //
-        case 0:
-            matchStatus = false
-            textLabel.text = "Loss";
-            
-        case 1:
-            matchStatus = true
-            textLabel.text = "WIN!";
-            
-        default:
-            break;
-        }
+
+    @IBAction func winButton(sender: AnyObject) {
+        
+        matchStatus = true
+        println(matchStatus)
+        
     }
+
+    
+    @IBAction func lostButton(sender: AnyObject) {
+        
+        matchStatus = false
+        println(matchStatus)
+        
+    }
+    
+
+    
 
     //////////////////////////////////////////////////////
     //

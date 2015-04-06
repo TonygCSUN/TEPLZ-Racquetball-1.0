@@ -6,11 +6,33 @@
 //  Copyright (c) 2015 Apps for TEPLZ. All rights reserved.
 //
 
+//  this video was helpful.object
+//  https://youtu.be/GvsEhDEGO_k
+//  PhillyDev716
+
+
+
 import UIKit
 
-class BeaconDemoViewController: UIViewController, ESTBeaconManagerDelegate {
+
+class BeaconDemoViewController: UIViewController, ESTBeaconManagerDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var beaconLabel: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var beacons: [ESTBeacon]?
+
+    /*
+    /////
+    var beacons: [CLBeacon]?
+    
+    var window: UIWindow?
+    var locationManager: CLLocationManager?
+    var lastProximity: CLProximity?
+    ////
+    */
+    
     
     let webView = UIWebView()
     var buttonWeb = UIBarButtonItem()
@@ -25,8 +47,8 @@ class BeaconDemoViewController: UIViewController, ESTBeaconManagerDelegate {
         //set beacon manager delegate
         beaconManager.delegate = self;
         
-        //create the beacon region
-        var beaconRegion : ESTBeaconRegion = ESTBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D"), major: 26050, minor: 64706, identifier: "regionName")
+        //create the beacon region // blue beacon
+        var beaconRegion : ESTBeaconRegion = ESTBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D"), major: 18059, minor: 43132, identifier: "regionName")
         
         //Opt in to be notified upon entering and exiting region
         beaconRegion.notifyOnEntry = true
@@ -39,16 +61,31 @@ class BeaconDemoViewController: UIViewController, ESTBeaconManagerDelegate {
     }
     
     func beaconManager(manager: ESTBeaconManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: ESTBeaconRegion!) {
+        /*
+        /////
+        let viewController:BeaconDemoViewController = window?.rootViewController as BeaconDemoViewController
+        viewController.beacons = beacons as [CLBeacon]?
+        viewController.tableView!.reloadData()
+        /////
+        */
         
         if beacons.count > 0 {
             var firstBeacon : ESTBeacon = beacons.first! as ESTBeacon
             
-            self.beaconLabel.text = ("\(textForPromimity(firstBeacon.proximity))")
+            self.beaconLabel.text = ("\(textForProximity(firstBeacon.proximity))")
             
         }
+        
+        /////
+        /////
+        
+        var activePlayers = ["tonyg", "anjeee", "sienna", "troy"]
+        
+        /////
+        /////
     }
     
-    func textForPromimity(proximity:CLProximity) -> (NSString)
+    func textForProximity(proximity:CLProximity) -> (NSString)
     {
         var distance : NSString!
         
@@ -117,6 +154,57 @@ class BeaconDemoViewController: UIViewController, ESTBeaconManagerDelegate {
     }
     
 
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Potentially incomplete method implementation.
+        // Return the number of sections.
+        
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
+        if(beacons != nil) {
+            return beacons!.count
+        } else {
+            return 0
+        }
+    }
+
+    
+     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell:UITableViewCell? =
+        tableView.dequeueReusableCellWithIdentifier("MyIdentifier") as? UITableViewCell
+        
+        if(cell == nil) {
+            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyIdentifier")
+            cell!.selectionStyle = UITableViewCellSelectionStyle.None
+        }
+        
+        let beacon:ESTBeacon = beacons![indexPath.row]
+        var proximityLabel:String! = ""
+        
+        switch beacon.proximity {
+        case CLProximity.Far:
+            proximityLabel = "Far"
+        case CLProximity.Near:
+            proximityLabel = "Near"
+        case CLProximity.Immediate:
+            proximityLabel = "Immediate"
+        case CLProximity.Unknown:
+            proximityLabel = "Unknown"
+        }
+        
+        cell!.textLabel!.text = proximityLabel
+        
+        let detailLabel:String = "Major: \(beacon.major.integerValue), " +
+            "Minor: \(beacon.minor.integerValue), " +
+            "RSSI: \(beacon.rssi as Int), " +
+        "UUID: \(beacon.proximityUUID.UUIDString)"
+        cell!.detailTextLabel!.text = detailLabel
+        
+        return cell!
+    }
     
 
     /*
@@ -130,3 +218,62 @@ class BeaconDemoViewController: UIViewController, ESTBeaconManagerDelegate {
     */
 
 }
+
+
+/*
+///////////
+
+extension BeaconDemoViewController: UITableViewDataSource {
+    func tableView(tableView: UITableView,
+        numberOfRowsInSection section: Int) -> Int {
+            if(beacons != nil) {
+                return beacons!.count
+            } else {
+                return 0
+            }
+    }
+    
+    func tableView(tableView: UITableView,
+        cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+            var cell:UITableViewCell? =
+            tableView.dequeueReusableCellWithIdentifier("MyIdentifier") as? UITableViewCell
+            
+            if(cell == nil) {
+                cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyIdentifier")
+                cell!.selectionStyle = UITableViewCellSelectionStyle.None
+            }
+            
+            let beacon:CLBeacon = beacons![indexPath.row]
+            var proximityLabel:String! = ""
+            
+            switch beacon.proximity {
+            case CLProximity.Far:
+                proximityLabel = "Far"
+            case CLProximity.Near:
+                proximityLabel = "Near"
+            case CLProximity.Immediate:
+                proximityLabel = "Immediate"
+            case CLProximity.Unknown:
+                proximityLabel = "Unknown"
+            }
+            
+            cell!.textLabel!.text = proximityLabel
+            
+            let detailLabel:String = "Major: \(beacon.major.integerValue), " +
+                "Minor: \(beacon.minor.integerValue), " +
+                "RSSI: \(beacon.rssi as Int), " +
+            "UUID: \(beacon.proximityUUID.UUIDString)"
+            cell!.detailTextLabel!.text = detailLabel
+            
+            return cell!
+    }
+}
+
+extension BeaconDemoViewController: UITableViewDelegate {
+    
+}
+
+//////////
+*/
+
+
