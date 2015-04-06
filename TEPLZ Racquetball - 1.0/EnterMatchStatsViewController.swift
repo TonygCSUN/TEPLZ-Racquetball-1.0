@@ -24,8 +24,8 @@ class EnterMatchStatsViewController: UIViewController,UINavigationControllerDele
             {(objects :[AnyObject]!, error: NSError!)->Void in
                 var objectOne: PFObject = objects[0] as PFObject
                 println("WOOP!")
-                // println(objects.debugDescription)
-                // println(objects.count)
+                println(objects.debugDescription)
+                println(objects.count)
                
 
                 let json = JSON(objects)
