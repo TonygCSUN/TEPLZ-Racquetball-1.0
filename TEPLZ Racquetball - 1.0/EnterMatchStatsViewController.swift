@@ -16,10 +16,11 @@ class EnterMatchStatsViewController: UIViewController,UINavigationControllerDele
     
     @IBAction func getTotals(sender: AnyObject) {
         
+        // var totalWins = [""] as Array<String>!
+        
         var queryWinTotals = PFUser.query()
-        // queryWinTotals.whereKey("username", equalTo: "")
+    
         queryWinTotals.whereKey("username", equalTo: PFUser.currentUser().username)
-        // queryWinTotals.whereKey("totalWins", equalTo: objectForKey("totalWins") as String)
         queryWinTotals.findObjectsInBackgroundWithBlock
             {(objects :[AnyObject]!, error: NSError!)->Void in
                 var objectOne: PFObject = objects[0] as PFObject
@@ -27,8 +28,22 @@ class EnterMatchStatsViewController: UIViewController,UINavigationControllerDele
                 println(objects.debugDescription)
                 println(objects.count)
                
+                
+                println(objectOne)
+                
+                let json = JSON(objectOne)
+                
+                println(json)
 
-                let json = JSON(objects)
+                
+                // let json = JSON(objects)
+                
+                // let name = json["activePlayer"]["totalWins"]["username"].string
+                
+                // println(name)
+                
+                // totalWins = objects["username"]
+                // println(totalWins)
                 
                 // let name = json["username"].stringValue
                 // println(json)
@@ -36,8 +51,8 @@ class EnterMatchStatsViewController: UIViewController,UINavigationControllerDele
                 // let user: Dictionary<String, JSON> = json["username"].dictionaryValue
                 // println(user)
                 
-                let list: Array<JSON> = json["list"].arrayValue
-                println(list)
+                // let list: Array<JSON> = json["list"].arrayValue
+                // println(list)
                 
         }
         
