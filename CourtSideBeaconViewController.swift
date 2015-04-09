@@ -10,6 +10,45 @@ import UIKit
 
 class CourtSideBeaconViewController: UIViewController {
 
+    
+    
+    @IBAction func checkIn(sender: AnyObject) {
+        
+        PFUser.currentUser().setObject(true, forKey: "activePlayer")
+        
+        PFUser.currentUser().saveInBackgroundWithBlock {
+            (success: Bool!, error: NSError!) -> Void in
+            
+            if (success != nil) {
+                println("Object modified")
+                
+            } else {
+                println("Error: \(error)")
+            }
+        }
+    }
+    
+    
+    @IBAction func checkOut(sender: AnyObject) {
+        
+        PFUser.currentUser().setObject(false, forKey: "activePlayer")
+        
+        PFUser.currentUser().saveInBackgroundWithBlock {
+            (success: Bool!, error: NSError!) -> Void in
+            
+            if (success != nil) {
+                println("Object created")
+                
+            } else {
+                println("Error: \(error)")
+            }
+        }
+    }
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -10,22 +10,33 @@ import UIKit
 
 class LeaderBoardViewController: UIViewController, ESTBeaconManagerDelegate {
 
+    
     let beaconManager : ESTBeaconManager = ESTBeaconManager()
+    
+    
+    @IBOutlet weak var winsCount: UILabel!
+    // winsCount.text =
+    
+    
+    @IBOutlet weak var winPercentage: UILabel!
+    
+    
+    @IBOutlet weak var gamesCount: UILabel!
     
     
     @IBOutlet weak var username: UILabel!
     
+    
     @IBAction func whoAmI(sender: AnyObject) {
         if PFUser.currentUser() != nil {
             
-            username.text = ("\(PFUser.currentUser())")
+            username.text = ("\(PFUser.currentUser().username)")
             
         }
         else {
             // reload()
         }
     }
-    
     
     
     @IBOutlet weak var enterMatchStats: UIButton!
@@ -39,6 +50,25 @@ class LeaderBoardViewController: UIViewController, ESTBeaconManagerDelegate {
     }
     
     
+    @IBAction func myStatsButton(sender: AnyObject) {
+        
+        PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
+            var winCount = user.objectForKey("totalWins") as Int
+            self.winsCount.text = "\(winCount)"
+        }
+        
+        PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
+            var gameCount = user.objectForKey("totalGames") as Int
+            self.gamesCount.text = "\(gameCount)"
+        }
+        
+        PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
+            var winPercent = user.objectForKey("winPct") as Int
+            self.winPercentage.text = "\(winPercent)"
+        }
+
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
