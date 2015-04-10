@@ -15,6 +15,10 @@
 		F909ABE91AC87A8D00505086 /* BeaconDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F909ABE81AC87A8D00505086 /* BeaconDetailsViewController.swift */; };
 		F909ABEB1AC8C56D00505086 /* BeaconDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F909ABEA1AC8C56D00505086 /* BeaconDemoViewController.swift */; };
 		F90C1C281AD6128B00444F8A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90C1C271AD6128B00444F8A /* DetailViewController.swift */; };
+		F90C1C2A1AD6517000444F8A /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90C1C291AD6517000444F8A /* ParseFacebookUtils.framework */; };
+		F90C1C2C1AD651F400444F8A /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90C1C2B1AD651F400444F8A /* ParseFacebookUtils.framework */; };
+		F90C1C2E1AD6522600444F8A /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90C1C2D1AD6522600444F8A /* ParseCrashReporting.framework */; };
+		F90C1C301AD76E9D00444F8A /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90C1C2F1AD76E9D00444F8A /* TestTableViewController.swift */; };
 		F9209FEB1ABE545F00CCF6B7 /* TASSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9209FEA1ABE545F00CCF6B7 /* TASSViewController.swift */; };
 		F9209FED1ABE547200CCF6B7 /* AdvancedLessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9209FEC1ABE547200CCF6B7 /* AdvancedLessonsViewController.swift */; };
 		F9209FEF1ABE549C00CCF6B7 /* BasicShotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9209FEE1ABE549C00CCF6B7 /* BasicShotDetailViewController.swift */; };
@@ -87,6 +91,10 @@
 		F909ABE81AC87A8D00505086 /* BeaconDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconDetailsViewController.swift; sourceTree = "<group>"; };
 		F909ABEA1AC8C56D00505086 /* BeaconDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeaconDemoViewController.swift; path = ../BeaconDemoViewController.swift; sourceTree = "<group>"; };
 		F90C1C271AD6128B00444F8A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F90C1C291AD6517000444F8A /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "../../parse-library-1/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
+		F90C1C2B1AD651F400444F8A /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		F90C1C2D1AD6522600444F8A /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		F90C1C2F1AD76E9D00444F8A /* TestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
 		F9209FEA1ABE545F00CCF6B7 /* TASSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TASSViewController.swift; sourceTree = "<group>"; };
 		F9209FEC1ABE547200CCF6B7 /* AdvancedLessonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedLessonsViewController.swift; sourceTree = "<group>"; };
 		F9209FEE1ABE549C00CCF6B7 /* BasicShotDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicShotDetailViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F90C1C2A1AD6517000444F8A /* ParseFacebookUtils.framework in Frameworks */,
 				F958BF831AC7A7C500237A45 /* libEstimoteSDK.a in Frameworks */,
 				F958BF671AC7A6F800237A45 /* libEstimoteSDK.a in Frameworks */,
 				F9209FF91ABE5BE200CCF6B7 /* AudioToolbox.framework in Frameworks */,
@@ -189,9 +198,11 @@
 				F9E400AE1AB625DE00B9C9BA /* Foundation.framework in Frameworks */,
 				F9E400AC1AB625C800B9C9BA /* libsqlite3.dylib in Frameworks */,
 				F9E400A11AB625AB00B9C9BA /* CFNetwork.framework in Frameworks */,
+				F90C1C2E1AD6522600444F8A /* ParseCrashReporting.framework in Frameworks */,
 				F9E400A21AB625AB00B9C9BA /* CoreData.framework in Frameworks */,
 				F9E400A31AB625AB00B9C9BA /* CoreFoundation.framework in Frameworks */,
 				F9E400A41AB625AB00B9C9BA /* CoreGraphics.framework in Frameworks */,
+				F90C1C2C1AD651F400444F8A /* ParseFacebookUtils.framework in Frameworks */,
 				F9209FF71ABE58D900CCF6B7 /* ParseUI.framework in Frameworks */,
 				F9E400A51AB625AB00B9C9BA /* CoreLocation.framework in Frameworks */,
 				F9E400A61AB625AB00B9C9BA /* MobileCoreServices.framework in Frameworks */,
@@ -328,6 +339,9 @@
 		F9B20B401A9E3BC6002D99F4 = {
 			isa = PBXGroup;
 			children = (
+				F90C1C2F1AD76E9D00444F8A /* TestTableViewController.swift */,
+				F90C1C2D1AD6522600444F8A /* ParseCrashReporting.framework */,
+				F90C1C291AD6517000444F8A /* ParseFacebookUtils.framework */,
 				F98654D71AD5C31600093135 /* TableViewController.swift */,
 				F940EEE21ACA7BAA00E635FD /* TestViewController.swift */,
 				F940EEE41ACA81A400E635FD /* StandardTableViewController.swift */,
@@ -379,6 +393,7 @@
 				F9E400901AB6248900B9C9BA /* Parse.framework */,
 				F9E400911AB6248900B9C9BA /* ParseUI.framework */,
 				F9B20B521A9E3BC6002D99F4 /* Main.storyboard */,
+				F90C1C2B1AD651F400444F8A /* ParseFacebookUtils.framework */,
 				F9B20B4E1A9E3BC6002D99F4 /* AppDelegate.swift */,
 				F909ABE81AC87A8D00505086 /* BeaconDetailsViewController.swift */,
 				F909ABEA1AC8C56D00505086 /* BeaconDemoViewController.swift */,
@@ -554,6 +569,7 @@
 				F9B20B6F1A9E4795002D99F4 /* QuickPlay.swift in Sources */,
 				F90C1C281AD6128B00444F8A /* DetailViewController.swift in Sources */,
 				F940EEE31ACA7BAA00E635FD /* TestViewController.swift in Sources */,
+				F90C1C301AD76E9D00444F8A /* TestTableViewController.swift in Sources */,
 				F958BF601AC7A5EC00237A45 /* README.md in Sources */,
 				F9209FF11ABE54B100CCF6B7 /* BasicShot.swift in Sources */,
 				F9D01FFF1AC10A4E0047120B /* QuickPlayTableViewCell.swift in Sources */,
@@ -702,6 +718,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Pods/EstimoteSDK/EstimoteSDK",
+					"/Users/tonyGuerrero/OneDrive/xCode/parse-library-1",
+					"$(PROJECT_DIR)/TEPLZ",
+					Racquetball,
+					"-",
+					1.0,
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -731,6 +752,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Pods/EstimoteSDK/EstimoteSDK",
+					"/Users/tonyGuerrero/OneDrive/xCode/parse-library-1",
+					"$(PROJECT_DIR)/TEPLZ",
+					Racquetball,
+					"-",
+					1.0,
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

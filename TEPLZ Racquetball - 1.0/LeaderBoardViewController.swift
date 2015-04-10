@@ -8,14 +8,15 @@
 
 import UIKit
 
-class LeaderBoardViewController: UIViewController, ESTBeaconManagerDelegate {
+class LeaderBoardViewController:  UIViewController, ESTBeaconManagerDelegate {
+    
+
 
     
     let beaconManager : ESTBeaconManager = ESTBeaconManager()
     
     
     @IBOutlet weak var winsCount: UILabel!
-    // winsCount.text =
     
     
     @IBOutlet weak var winPercentage: UILabel!
@@ -38,16 +39,16 @@ class LeaderBoardViewController: UIViewController, ESTBeaconManagerDelegate {
         }
     }
     
-    
-    @IBOutlet weak var enterMatchStats: UIButton!
-    
-    
+
     @IBAction func logout(sender: AnyObject) {
+        
         PFUser.logOut()
         var currentUser = PFUser.currentUser() // this will now be nil
         
         // NEED CODE TO DISPLAY POPUP OF "OK" DISMISS BUTTON
+        
     }
+    
     
     
     @IBAction func myStatsButton(sender: AnyObject) {
@@ -75,6 +76,10 @@ class LeaderBoardViewController: UIViewController, ESTBeaconManagerDelegate {
 
         // Do any additional setup after loading the view.
         
+
+        
+        
+        
         //set beacon manager delegate
         beaconManager.delegate = self;
         
@@ -92,11 +97,83 @@ class LeaderBoardViewController: UIViewController, ESTBeaconManagerDelegate {
     }
     
 
-    @IBAction func beaconPage(sender: AnyObject)
-    {
-        //
+    
+
+    @IBAction func refresh(sender: AnyObject) {
+        
+        
+        PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
+            var winCount = user.objectForKey("totalWins") as Int
+            self.winsCount.text = "\(winCount)"
+            println(winCount)
+        }
+        
+        PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
+            var gameCount = user.objectForKey("totalGames") as Int
+            self.gamesCount.text = "\(gameCount)"
+            println(gameCount)
+        }
+        
+        PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
+            var winPercent = user.objectForKey("winPct") as Int
+            self.winPercentage.text = "\(winPercent)"
+            println(winPercent)
+        }
+        
+        
+        
+        /*
+        /////////////
+        
+        PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
+            var user: AnyObject! = user.objectForKey("objectId​")
+            
+            println(user)
+        }
+
+        
+        
+        PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
+            var active = user.objectForKey("activePlayer") as Bool
+            
+            println(active)
+            
+        }
+        
+        
+        PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
+            var usernames = user.objectForKey("username") as String
+            
+            println(usernames)
+            
+        }
+        
+        //////////////
+        */
+            
+            
+        /*
+        
+        var query = PFUser.query()
+        query.whereKey("winPct", greaterThan: 50)
+        query.orderByAscending("winPct")
+        query.limit = 5
+        query.findObjectsInBackgroundWithBlock
+            {(objects :[AnyObject]!, error: NSError!)->Void in
+                var objectOne: PFObject = objects[0] as PFObject
+                println("WOOP!")
+                println(objects.debugDescription)
+                println(objects.count)
+                println(objects.description)
+        }
+        */
         
     }
+
+    
+ 
+
+    
     
     func beaconManager(manager: ESTBeaconManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: ESTBeaconRegion!) {
         
@@ -109,6 +186,10 @@ class LeaderBoardViewController: UIViewController, ESTBeaconManagerDelegate {
             
         }
     }
+    
+    
+    
+    
     //
     /*
     func textForPromimity(proximity:CLProximity) -> (NSString)
@@ -159,5 +240,33 @@ class LeaderBoardViewController: UIViewController, ESTBeaconManagerDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    ////////////////////////
+    ////////////////////////
+    //
+    // this loads the temp tableview to test functionality
+    //
+    ////////////////////////
+    ////////////////////////
+    
 
+
+    
+    
+    
+    
+    
+    
+    
+    ////////////////////////
+    ////////////////////////
+    //
+    // this loads the temp tableview to test functionality
+    //
+    ////////////////////////
+    ////////////////////////
+    
 }
+
+
+

@@ -10,7 +10,6 @@ import UIKit
 
 class TableViewController: PFQueryTableViewController {
     
-    
     // Initialise the PFQueryTable tableview
     override init!(style: UITableViewStyle, className: String!) {
         super.init(style: style, className: className)
@@ -20,20 +19,20 @@ class TableViewController: PFQueryTableViewController {
         super.init(coder: aDecoder)
         
         // Configure the PFQueryTableView
-        self.parseClassName = "Match"
-        self.textKey = "objectId"
+        self.parseClassName = "_User"
+        self.textKey = "username"
+        self.textKey = "winPct"
         self.pullToRefreshEnabled = true
         self.paginationEnabled = false
     }
     
     // Define the query that will provide the data for the table view
     override func queryForTable() -> PFQuery! {
-        var query = PFQuery(className: "Match")
-        query.orderByAscending("objectId")
+        var query = PFQuery(className: "_User")
+        query.orderByDescending("winPct")
         return query
-
+        
     }
-    
     
     //override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject) -> PFTableViewCell {
@@ -44,13 +43,11 @@ class TableViewController: PFQueryTableViewController {
         }
         
         // Extract values from the PFObject to display in the table cell
-        cell?.textLabel?.text = object["User"] as String!
-        cell?.detailTextLabel?.text = object["result"] as String!
+        cell?.textLabel?.text = object["username"] as String!
+        // cell?.detailTextLabel?.text = object["winPct"] as String!
         
         return cell
     }
-    
-    
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -64,12 +61,11 @@ class TableViewController: PFQueryTableViewController {
             detailScene.currentObject = objects[row] as? PFObject
         }
     }
-
     
     override func viewDidAppear(animated: Bool) {
         
         // Refresh the table to ensure any data changes are displayed
         tableView.reloadData()
     }
-   
+    
 }

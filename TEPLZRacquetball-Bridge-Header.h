@@ -18,6 +18,8 @@
 
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
+#import <Parse/PFObject.h>
+#import <Bolts/BFTask.h>
 #import "ESTBeaconManager.h"
 #import "SwiftyJSON.h"
 
