@@ -22,6 +22,8 @@ class BeaconDemoViewController: UIViewController, ESTBeaconManagerDelegate, CLLo
     @IBOutlet weak var tableView: UITableView!
     
     var beacons: [ESTBeacon]?
+    
+    var players: [PFUser]?
 
     /*
     /////
@@ -43,6 +45,7 @@ class BeaconDemoViewController: UIViewController, ESTBeaconManagerDelegate, CLLo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        players = []
         
         //set beacon manager delegate
         beaconManager.delegate = self;
@@ -62,6 +65,7 @@ class BeaconDemoViewController: UIViewController, ESTBeaconManagerDelegate, CLLo
         beaconManager.startRangingBeaconsInRegion(beaconRegion)
         beaconManager.startMonitoringForRegion(beaconRegion)
         beaconManager.requestAlwaysAuthorization()
+        // func you made
     }
     
     func beaconManager(manager: ESTBeaconManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: ESTBeaconRegion!) {
@@ -73,21 +77,29 @@ class BeaconDemoViewController: UIViewController, ESTBeaconManagerDelegate, CLLo
         /////
         */
         
+        var query: PFQuery = PFQuery(className: "_User")
+        query.whereKey("activePlayer", equalTo: true)
+        query.findObjectsInBackgroundWithBlock({ (playersReturned: [AnyObject]!, error: NSError!) -> Void in
+            for object in playersReturned {
+                var objectTemp = object as PFUser
+                self.players?.append(objectTemp)
+            }
+            self.tableView.reloadData()
+        })
+        
         if beacons.count > 0 {
             var firstBeacon : ESTBeacon = beacons.first! as ESTBeacon
             
             self.beaconLabel.text = ("\(textForProximity(firstBeacon.proximity))")
             
+            
         }
         
-        /////
-        /////
-        
-        var activePlayers = ["tonyg", "anjeee", "sienna", "troy"]
-        
-        /////
-        /////
+
     }
+    /////////
+    // func DO SOMETHING
+    /////////
     
     func textForProximity(proximity:CLProximity) -> (NSString)
     {
@@ -168,8 +180,8 @@ class BeaconDemoViewController: UIViewController, ESTBeaconManagerDelegate, CLLo
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        if(beacons != nil) {
-            return beacons!.count
+        if(players != nil) {
+            return players!.count
         } else {
             return 0
         }
@@ -184,7 +196,7 @@ class BeaconDemoViewController: UIViewController, ESTBeaconManagerDelegate, CLLo
             cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyIdentifier")
             cell!.selectionStyle = UITableViewCellSelectionStyle.None
         }
-        
+        /*
         let beacon:ESTBeacon = beacons![indexPath.row]
         var proximityLabel:String! = ""
         
@@ -198,15 +210,17 @@ class BeaconDemoViewController: UIViewController, ESTBeaconManagerDelegate, CLLo
         case CLProximity.Unknown:
             proximityLabel = "Unknown"
         }
-        
-        cell!.textLabel!.text = proximityLabel
-        
+        */
+        let tablePlayer = players![indexPath.row] as PFUser
+        cell!.textLabel!.text = tablePlayer.objectForKey("username") as? String
+        cell!.detailTextLabel!.text = tablePlayer.objectForKey("winPct") as? String;
+        /*
         let detailLabel:String = "Major: \(beacon.major.integerValue), " +
             "Minor: \(beacon.minor.integerValue), " +
             "RSSI: \(beacon.rssi as Int), " +
         "UUID: \(beacon.proximityUUID.UUIDString)"
         cell!.detailTextLabel!.text = detailLabel
-        
+        */
         return cell!
     }
     

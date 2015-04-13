@@ -35,7 +35,7 @@ class LeaderBoardViewController:  UIViewController, ESTBeaconManagerDelegate {
             
         }
         else {
-            // reload()
+            username.text = "Please Sign in"
         }
     }
     
@@ -53,21 +53,29 @@ class LeaderBoardViewController:  UIViewController, ESTBeaconManagerDelegate {
     
     @IBAction func myStatsButton(sender: AnyObject) {
         
-        PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
-            var winCount = user.objectForKey("totalWins") as Int
-            self.winsCount.text = "\(winCount)"
-        }
+        if PFUser.currentUser() != nil {
         
-        PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
-            var gameCount = user.objectForKey("totalGames") as Int
-            self.gamesCount.text = "\(gameCount)"
-        }
         
-        PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
-            var winPercent = user.objectForKey("winPct") as Int
-            self.winPercentage.text = "\(winPercent)"
-        }
+            PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
+                var winCount = user.objectForKey("totalWins") as Int
+                self.winsCount.text = "\(winCount)"
+            }
+        
+            PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
+                var gameCount = user.objectForKey("totalGames") as Int
+                self.gamesCount.text = "\(gameCount)"
+            }
+        
+            PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
+                var winPercent = user.objectForKey("winPct") as Int
+                self.winPercentage.text = "\(winPercent)"
+            }
 
+        }
+        else {
+            // print error
+            username.text = "Please Sign in"
+        }
         
     }
     
@@ -96,6 +104,14 @@ class LeaderBoardViewController:  UIViewController, ESTBeaconManagerDelegate {
         beaconManager.requestAlwaysAuthorization()
     }
     
+    
+    @IBAction func getTable(sender: AnyObject) {
+        var tableViewContoller = self.storyboard?.instantiateViewControllerWithIdentifier("topPlayersTable") as TableViewController
+        self.addChildViewController(tableViewContoller)
+        var tableViewView = tableViewContoller.view;
+        tableViewView.frame = self.view.viewWithTag(123456789)!.frame
+        self.view.addSubview(tableViewView);
+    }
 
     
 

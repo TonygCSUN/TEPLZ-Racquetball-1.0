@@ -1,26 +1,18 @@
 //
-//  TASSViewController.swift
+//  SurveyInstrumentsViewController.swift
 //  TEPLZ Racquetball - 1.0
 //
-//  Created by TonyGuerrero on 3/1/15.
+//  Created by TonyGuerrero on 4/12/15.
 //  Copyright (c) 2015 Apps for TEPLZ. All rights reserved.
 //
 
 import UIKit
 
-class TASSViewController: UIViewController {
+class SurveyInstrumentsViewController: UIViewController {
 
-    @IBOutlet var webView: UIWebView!
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = NSURL(string: "https://sites.google.com/site/lessonsinracquetball/home/cscl-activities/cscs-investigations-you-have-created/cscl-lesson-4")
-        // let requestURL = NSURL(string: url)
-        let request = NSURLRequest(URL: url!)
-        webView.loadRequest(request)
-        
+
         // Do any additional setup after loading the view.
     }
 
@@ -29,6 +21,7 @@ class TASSViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
     /*
     // MARK: - Navigation
 

@@ -19,6 +19,11 @@
 		F90C1C2C1AD651F400444F8A /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90C1C2B1AD651F400444F8A /* ParseFacebookUtils.framework */; };
 		F90C1C2E1AD6522600444F8A /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90C1C2D1AD6522600444F8A /* ParseCrashReporting.framework */; };
 		F90C1C301AD76E9D00444F8A /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90C1C2F1AD76E9D00444F8A /* TestTableViewController.swift */; };
+		F91B3B581ADB2C5D0024F799 /* SurveyInstrumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B3B571ADB2C5D0024F799 /* SurveyInstrumentsViewController.swift */; };
+		F91B3B5A1ADB32230024F799 /* PreUnfamiliarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B3B591ADB32230024F799 /* PreUnfamiliarViewController.swift */; };
+		F91B3B5C1ADB350A0024F799 /* PreFamiliarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B3B5B1ADB350A0024F799 /* PreFamiliarViewController.swift */; };
+		F91B3B5E1ADB354E0024F799 /* PostUnfamiliarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B3B5D1ADB354E0024F799 /* PostUnfamiliarViewController.swift */; };
+		F91B3B601ADB357E0024F799 /* PostFamiliarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91B3B5F1ADB357E0024F799 /* PostFamiliarViewController.swift */; };
 		F9209FEB1ABE545F00CCF6B7 /* TASSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9209FEA1ABE545F00CCF6B7 /* TASSViewController.swift */; };
 		F9209FED1ABE547200CCF6B7 /* AdvancedLessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9209FEC1ABE547200CCF6B7 /* AdvancedLessonsViewController.swift */; };
 		F9209FEF1ABE549C00CCF6B7 /* BasicShotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9209FEE1ABE549C00CCF6B7 /* BasicShotDetailViewController.swift */; };
@@ -95,6 +100,11 @@
 		F90C1C2B1AD651F400444F8A /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		F90C1C2D1AD6522600444F8A /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
 		F90C1C2F1AD76E9D00444F8A /* TestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
+		F91B3B571ADB2C5D0024F799 /* SurveyInstrumentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyInstrumentsViewController.swift; sourceTree = "<group>"; };
+		F91B3B591ADB32230024F799 /* PreUnfamiliarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreUnfamiliarViewController.swift; sourceTree = "<group>"; };
+		F91B3B5B1ADB350A0024F799 /* PreFamiliarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreFamiliarViewController.swift; sourceTree = "<group>"; };
+		F91B3B5D1ADB354E0024F799 /* PostUnfamiliarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostUnfamiliarViewController.swift; sourceTree = "<group>"; };
+		F91B3B5F1ADB357E0024F799 /* PostFamiliarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFamiliarViewController.swift; sourceTree = "<group>"; };
 		F9209FEA1ABE545F00CCF6B7 /* TASSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TASSViewController.swift; sourceTree = "<group>"; };
 		F9209FEC1ABE547200CCF6B7 /* AdvancedLessonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedLessonsViewController.swift; sourceTree = "<group>"; };
 		F9209FEE1ABE549C00CCF6B7 /* BasicShotDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicShotDetailViewController.swift; sourceTree = "<group>"; };
@@ -339,6 +349,11 @@
 		F9B20B401A9E3BC6002D99F4 = {
 			isa = PBXGroup;
 			children = (
+				F91B3B571ADB2C5D0024F799 /* SurveyInstrumentsViewController.swift */,
+				F91B3B591ADB32230024F799 /* PreUnfamiliarViewController.swift */,
+				F91B3B5B1ADB350A0024F799 /* PreFamiliarViewController.swift */,
+				F91B3B5D1ADB354E0024F799 /* PostUnfamiliarViewController.swift */,
+				F91B3B5F1ADB357E0024F799 /* PostFamiliarViewController.swift */,
 				F90C1C2F1AD76E9D00444F8A /* TestTableViewController.swift */,
 				F90C1C2D1AD6522600444F8A /* ParseCrashReporting.framework */,
 				F90C1C291AD6517000444F8A /* ParseFacebookUtils.framework */,
@@ -558,6 +573,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91B3B5E1ADB354E0024F799 /* PostUnfamiliarViewController.swift in Sources */,
 				F90735B11ABE4F0200657310 /* LeaderboardViewController.swift in Sources */,
 				F90735B71ABE501900657310 /* MyStatsViewController.swift in Sources */,
 				F940EEE51ACA81A400E635FD /* StandardTableViewController.swift in Sources */,
@@ -574,6 +590,7 @@
 				F9209FF11ABE54B100CCF6B7 /* BasicShot.swift in Sources */,
 				F9D01FFF1AC10A4E0047120B /* QuickPlayTableViewCell.swift in Sources */,
 				F909ABE71AC7BBA600505086 /* BeaconViewController.swift in Sources */,
+				F91B3B581ADB2C5D0024F799 /* SurveyInstrumentsViewController.swift in Sources */,
 				F90735AF1ABE4EB100657310 /* SignUpViewController.swift in Sources */,
 				F98654D81AD5C31600093135 /* TableViewController.swift in Sources */,
 				F940EEDF1ACA44E900E635FD /* CourtSideBeaconTableViewController.swift in Sources */,
@@ -582,11 +599,14 @@
 				F98DADF01AC68A64000AC0C4 /* CourtSideViewController.swift in Sources */,
 				F958BF621AC7A5EC00237A45 /* README.md in Sources */,
 				F9B20B751A9E4940002D99F4 /* VideoViewController.swift in Sources */,
+				F91B3B5C1ADB350A0024F799 /* PreFamiliarViewController.swift in Sources */,
 				F9B20B731A9E4904002D99F4 /* QuickPlayDetailsViewController.swift in Sources */,
 				F9209FEB1ABE545F00CCF6B7 /* TASSViewController.swift in Sources */,
 				F9D020011AC131A50047120B /* BasicShotsTableViewCell.swift in Sources */,
 				F90735B51ABE4FBA00657310 /* EnterMatchStatsViewController.swift in Sources */,
 				F909ABEB1AC8C56D00505086 /* BeaconDemoViewController.swift in Sources */,
+				F91B3B5A1ADB32230024F799 /* PreUnfamiliarViewController.swift in Sources */,
+				F91B3B601ADB357E0024F799 /* PostFamiliarViewController.swift in Sources */,
 				F940EEDD1ACA44A500E635FD /* CourtSideBeaconViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

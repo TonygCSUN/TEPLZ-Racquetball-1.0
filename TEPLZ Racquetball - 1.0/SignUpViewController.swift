@@ -109,6 +109,11 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate, UI
                 var user = PFUser()
                 user.username = username.text
                 user.password = password.text
+                user.setObject(0, forKey: "totalWins")
+                user.setObject(0, forKey: "totalLosses")
+                user.setObject(0, forKey: "totalGames")
+                user.setObject(0, forKey: "winPct")
+                user.setObject(false, forKey: "activePlayer")
                 
                 user.signUpInBackgroundWithBlock {
                     (succeeded: Bool!, signupError: NSError!) -> Void in
@@ -119,7 +124,7 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate, UI
                     if signupError == nil  {
                         // Hooray! Let them use the app now.
                         
-                        println("signed up")
+                        println("signed up!")
                         
                         
                     } else {

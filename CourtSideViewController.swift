@@ -8,13 +8,13 @@
 
 import UIKit
 
-class CourtSideViewController: UIViewController, UITextFieldDelegate, ESTBeaconManagerDelegate {
+class CourtSideViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, ESTBeaconManagerDelegate {
 
+    @IBOutlet weak var ranging: UILabel!
     
-
+    var beacons: [ESTBeacon]?
     
-    
-
+    var players: [PFUser]?
     
     var matchStatus = Bool()
 
@@ -95,66 +95,89 @@ class CourtSideViewController: UIViewController, UITextFieldDelegate, ESTBeaconM
     @IBOutlet weak var enterMatchPoints: UITextField!
     
     
+    @IBOutlet weak var submitStatus: UIButton!
+    
+    
+    @IBOutlet weak var checkLogin: UILabel!
+    
     
     @IBAction func submitMatchScore(sender: AnyObject)
     {
         
-        
-        
-        
-        if matchStatus == true {
+
+            if PFUser.currentUser() == nil {
             
-            PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
-                var winCount = user.objectForKey("totalWins") as Int
-                winCount++;
-                PFUser.currentUser().setObject(winCount, forKey: "totalWins")
-                PFUser.currentUser().save()
-                
-                println(winCount)
-                
-                var gameCount = user.objectForKey("totalGames") as Int; gameCount++;
-                PFUser.currentUser().setObject(gameCount, forKey: "totalGames")
-                PFUser.currentUser().save()
-                
-                println(gameCount)
-                
-                var winPct = (winCount * 100) / gameCount
-                PFUser.currentUser().setObject(winPct, forKey: "winPct")
-                PFUser.currentUser().save()
-                
-                println(winPct)
+                checkLogin.text = "Please Sign in"
             
-        }
-           
-        }
+            }
         
-            else {
+        
+            if
+                
+                matchStatus == true && PFUser.currentUser() != nil
+            {
             
                 PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
-                var lossCount = user.objectForKey("totalLosses") as Int; lossCount++;
-                PFUser.currentUser().setObject(lossCount, forKey: "totalLosses")
-                PFUser.currentUser().save()
+                    var winCount = user.objectForKey("totalWins") as Int
+                    winCount++;
+                    PFUser.currentUser().setObject(winCount, forKey: "totalWins")
+                    PFUser.currentUser().save()
                 
-                println(lossCount)
+                    println(winCount)
                 
-                var gameCount = user.objectForKey("totalGames") as Int; gameCount++;
-                PFUser.currentUser().setObject(gameCount, forKey: "totalGames")
-                PFUser.currentUser().save()
+                    var gameCount = user.objectForKey("totalGames") as Int; gameCount++;
+                    PFUser.currentUser().setObject(gameCount, forKey: "totalGames")
+                    PFUser.currentUser().save()
                 
-                println(gameCount)
+                    println(gameCount)
                 
-                var winCount = user.objectForKey("totalWins") as Int
-                var winPct = (winCount * 100) / gameCount
-                PFUser.currentUser().setObject(winPct, forKey: "winPct")
-                PFUser.currentUser().save()
+                    var winPct = (winCount * 100) / gameCount
+                    PFUser.currentUser().setObject(winPct, forKey: "winPct")
+                    PFUser.currentUser().save()
+                
+                    println(winPct)
+            
+                }
+           
+            }
+        
+            if
+            
+                matchStatus == false && PFUser.currentUser() != nil
+            {
+            
+                    PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
+                        var lossCount = user.objectForKey("totalLosses") as Int; lossCount++;
+                    PFUser.currentUser().setObject(lossCount, forKey: "totalLosses")
+                    PFUser.currentUser().save()
+                
+                    println(lossCount)
+                
+                    var gameCount = user.objectForKey("totalGames") as Int; gameCount++;
+                    PFUser.currentUser().setObject(gameCount, forKey: "totalGames")
+                    PFUser.currentUser().save()
+                
+                    println(gameCount)
+                
+                    var winCount = user.objectForKey("totalWins") as Int
+                    var winPct = (winCount * 100) / gameCount
+                    PFUser.currentUser().setObject(winPct, forKey: "winPct")
+                    PFUser.currentUser().save()
                     
-                println(winPct)
+                    println(winPct)
                 
+                    }
             }
+        
+            else
+            {
+                //
+                checkLogin.text = "Please Sign in"
+                return;
             }
         
-        
-        
+            
+
         var match = PFObject(className: "Match") // Score
         
         match.setObject(enterMatchPoints.text.toInt(), forKey: "score")
@@ -179,59 +202,9 @@ class CourtSideViewController: UIViewController, UITextFieldDelegate, ESTBeaconM
                 
                 
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        /*
-        // {
-        /////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////
-        //
-        //
-        //
-        
-        println(wins)
-        println(games)
-        
-        
-        var user = PFObject(className: "User")
-        // // var user = PFQuery(className: "User")
-        
-        user.setObject((wins), forKey: "totalWins")
-        user.setObject((games), forKey: "totalGames")
-        // user.setObject([games + currentGames], forKey: "totalGames")
-        user.saveInBackgroundWithBlock {
-        (success: Bool!, error: NSError!) -> Void in
-        
-        if success == true {
-        
-        println("Score created with ID: \(user.objectId)")
-        
-        } else {
-        
-        println(error)
-        
-        }
-        
-        
-        }
-        //
-        //
-        /////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////
-        }
-        */
-    
     }
+
+    
     
     
     ///////////////////////////////////////////////////////////
@@ -274,67 +247,209 @@ class CourtSideViewController: UIViewController, UITextFieldDelegate, ESTBeaconM
     
     
     
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent)
+    {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool
+    {
+        //
+        textField.resignFirstResponder()
+        
+        return true
+        
+    }
+    
+    
     @IBOutlet weak var submitTitle: UILabel!
 
     
     
-    
+    // this makes the player active status TRUE
     @IBAction func join(sender: AnyObject) {
         
         
-        PFUser.currentUser().setObject(true, forKey: "activePlayer")
+        if PFUser.currentUser() == nil {
+            
+            checkLogin.text = "Please Sign in"
+            
+        }
+        else{
+            
+            //
         
-        PFUser.currentUser().saveInBackgroundWithBlock {
+            PFUser.currentUser().setObject(true, forKey: "activePlayer")
+        
+            PFUser.currentUser().saveInBackgroundWithBlock {
             (success: Bool!, error: NSError!) -> Void in
             
             if (success != nil) {
                 println("Object modified")
                 
-            } else {
+                }
+            else {
                 println("Error: \(error)")
+                }
             }
-        }
         
+        }
+    
     }
 
     
-
+    // this makes the player active status FALSE
     @IBAction func finish(sender: AnyObject) {
         
+        if PFUser.currentUser() == nil {
+            
+            checkLogin.text = "Please Sign in"
+            
+        }
+        else{
+            
+            //
+         
+            PFUser.currentUser().setObject(false, forKey: "activePlayer")
         
-        PFUser.currentUser().setObject(false, forKey: "activePlayer")
-        
-        PFUser.currentUser().saveInBackgroundWithBlock {
+            PFUser.currentUser().saveInBackgroundWithBlock {
             (success: Bool!, error: NSError!) -> Void in
             
             if (success != nil) {
                 println("Object created")
                 
-            } else {
+                }
+            else {
                 println("Error: \(error)")
+                
+                }
             }
+            
         }
         
     }
     
     
-    
+    let beaconManager : ESTBeaconManager = ESTBeaconManager();
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        players = []
+        
         enterMatchPoints.delegate = self
+        
+        
+        //set beacon manager delegate
+        beaconManager.delegate = self;
+        
+        // blue: (major: 18059, minor: 43132)
+        // stone: (major: 59864, minor: 22652)
+        // ice: (major: 26050, minor: 64706)
+        
+        //create the beacon region // blue beacon
+        var beaconRegion : ESTBeaconRegion = ESTBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D"), major: 26050, minor: 64706, identifier: "regionName")
+        
+        //Opt in to be notified upon entering and exiting region
+        beaconRegion.notifyOnEntry = true
+        beaconRegion.notifyOnExit = true
+        
+        //beacon manager asks permission from user
+        beaconManager.startRangingBeaconsInRegion(beaconRegion)
+        beaconManager.startMonitoringForRegion(beaconRegion)
+        beaconManager.requestAlwaysAuthorization()
+        
+        
+        /*
+    func beaconManager(manager: ESTBeaconManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: ESTBeaconRegion!) {
+            /*
+            /////
+            let viewController:BeaconDemoViewController = window?.rootViewController as BeaconDemoViewController
+            viewController.beacons = beacons as [CLBeacon]?
+            viewController.tableView!.reloadData()
+            /////
+            */
+            
+            var query: PFQuery = PFQuery(className: "_User")
+            query.whereKey("activePlayer", equalTo: true)
+            query.findObjectsInBackgroundWithBlock({ (playersReturned: [AnyObject]!, error: NSError!) -> Void in
+                for object in playersReturned {
+                    var objectTemp = object as PFUser
+                    self.players?.append(objectTemp)
+                }
+                self.tableView.reloadData()
+            })
+            
+            if beacons.count > 0 {
+                var firstBeacon : ESTBeacon = beacons.first! as ESTBeacon
+                
+                self.ranging.text = ("\(textForProximity(firstBeacon.proximity))")
+                
+                
+            }
     
         
     }
+        */
 
+       
+        
+    func textForProximity(proximity:CLProximity) -> (NSString)
+        {
+            var distance : NSString!
+            
+            switch(proximity)
+            {
+            case .Far:
+                println("Far")
+                distance = "FAR"
+                ranging.textColor = UIColor.redColor()
+                return distance
+            case .Near:
+                
+                println("Near")
+                distance = "NEAR"
+                ranging.textColor = UIColor.purpleColor()
+                return distance
+            case .Immediate:
+                
+                println("Immediate")
+                distance = "IMMEDIATE"
+                ranging.textColor = UIColor.greenColor()
+                return distance
+            case .Unknown:
+                println("Unknown")
+                distance = "UNKNOWN"
+                return distance
+            default:
+                break;
+            }
+            return distance
+        }
+    
+        
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    /*
+    //check for region failure
+    func beaconManager(manager: ESTBeaconManager!, monitoringDidFailForRegion region: ESTBeaconRegion!, withError error: NSError!) {
+        println("Region did fail: \(manager) \(region) \(error)")
+    }
+    
+    //checks permission status
+    func beaconManager(manager: ESTBeaconManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        println("Status: \(status)")
+    }
+        */
 
     /*
     // MARK: - Navigation
