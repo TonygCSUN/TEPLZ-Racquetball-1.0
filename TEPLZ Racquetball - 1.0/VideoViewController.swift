@@ -10,16 +10,32 @@ import UIKit
 
 class VideoViewController: UIViewController {
 
-    @IBOutlet weak var detailText: UITextView!
+
+    @IBOutlet weak var webView: UIWebView!
     
-    var currentQuickPlay : QuickPlay!
+    var basicShot : BasicShot!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        detailText.text = currentQuickPlay!.sectionDetailText
+        // detailText.text = currentQuickPlay!.sectionDetailText
+        
+        /*
+        let url = NSURL(string: [self.BasicShot!.sectionVideo])
+        // let requestURL = NSURL(string: url)
+        let request = NSURLRequest(URL: url!)
+        webView.loadRequest(request)
+        */
+        // "https://youtu.be/qtQ063APXKw"
+        
+        let url = NSURL(string: "https://youtu.be/qtQ063APXKw")
+        // let requestURL = NSURL(string: url)
+        let request = NSURLRequest(URL: url!)
+        webView.loadRequest(request)
+
+        
     }
 
     override func didReceiveMemoryWarning() {

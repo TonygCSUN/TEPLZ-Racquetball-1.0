@@ -16,5 +16,7 @@ struct BasicShot {
     var sectionImage: String
     var sectionDetailText: String
     var sectionDetailImage: String
+    var sectionVideo: String
+    
     
 }

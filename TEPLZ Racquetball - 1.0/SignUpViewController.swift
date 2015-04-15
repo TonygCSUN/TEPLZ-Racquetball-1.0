@@ -113,6 +113,8 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate, UI
                 user.setObject(0, forKey: "totalLosses")
                 user.setObject(0, forKey: "totalGames")
                 user.setObject(0, forKey: "winPct")
+                user.setObject(0, forKey: "totalEarnedMatchPoints")
+                user.setObject(0, forKey: "totalMatchPoints")
                 user.setObject(false, forKey: "activePlayer")
                 
                 user.signUpInBackgroundWithBlock {

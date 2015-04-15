@@ -25,6 +25,12 @@ class LeaderBoardViewController:  UIViewController, ESTBeaconManagerDelegate {
     @IBOutlet weak var gamesCount: UILabel!
     
     
+    @IBOutlet weak var totalPointsCount: UILabel!
+    
+    
+    @IBOutlet weak var yourPoints: UILabel!
+    
+    
     @IBOutlet weak var username: UILabel!
     
     
@@ -70,6 +76,16 @@ class LeaderBoardViewController:  UIViewController, ESTBeaconManagerDelegate {
                 var winPercent = user.objectForKey("winPct") as Int
                 self.winPercentage.text = "\(winPercent)"
             }
+            
+            PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
+                var totalPointsEarned = user.objectForKey("totalEarnedMatchPoints") as Int
+                self.yourPoints.text = "\(totalPointsEarned)"
+            }
+            
+            PFUser.currentUser().fetchInBackgroundWithBlock { (user: PFObject!, error: NSError!) -> Void in
+                var maxTotalPoints = user.objectForKey("totalMatchPoints") as Int
+                self.totalPointsCount.text = "out of    " + "\(maxTotalPoints)"
+            }
 
         }
         else {
@@ -113,7 +129,7 @@ class LeaderBoardViewController:  UIViewController, ESTBeaconManagerDelegate {
         self.view.addSubview(tableViewView);
     }
 
-    
+    /*
 
     @IBAction func refresh(sender: AnyObject) {
         
@@ -136,8 +152,8 @@ class LeaderBoardViewController:  UIViewController, ESTBeaconManagerDelegate {
             println(winPercent)
         }
         
-        
-        
+    
+    
         /*
         /////////////
         
@@ -186,10 +202,10 @@ class LeaderBoardViewController:  UIViewController, ESTBeaconManagerDelegate {
         
     }
 
-    
+    */
  
 
-    
+
     
     func beaconManager(manager: ESTBeaconManager!, didRangeBeacons beacons: [AnyObject]!, inRegion region: ESTBeaconRegion!) {
         
@@ -204,8 +220,8 @@ class LeaderBoardViewController:  UIViewController, ESTBeaconManagerDelegate {
     }
     
     
-    
-    
+
+
     //
     /*
     func textForPromimity(proximity:CLProximity) -> (NSString)
@@ -240,6 +256,7 @@ class LeaderBoardViewController:  UIViewController, ESTBeaconManagerDelegate {
     }
     //
     */
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -283,6 +300,7 @@ class LeaderBoardViewController:  UIViewController, ESTBeaconManagerDelegate {
     ////////////////////////
     
 }
+
 
 
 
